@@ -4,11 +4,38 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
+    public int dashes=0;
 
-    Rigidbody2D righ;
     public float speed;
+    public float dashSpeed;
+
+
+    private int direction;
+
+    public bool recarregar = false;
+
+
 
     
+
+
+
+    private float TempoDashInicial;
+
+    [SerializeField]
+    private float TempoDashMax;
+
+
+
+
+
+
+
+
+    Rigidbody2D righ;
+
+
+
 
     bool isDead = false;
 
@@ -35,7 +62,7 @@ public class Player : MonoBehaviour
             {
                 vida = 0;
             }
-            else if(value> vidaMax)
+            else if (value > vidaMax)
             {
                 vida = vidaMax;
             }
@@ -45,13 +72,13 @@ public class Player : MonoBehaviour
                 slider_.value = (float)vida / (float)vidaMax;
 
             }
-                
+
         }
     }
 
 
-   
-    
+
+
 
 
     // Start is called before the first frame update
@@ -59,17 +86,44 @@ public class Player : MonoBehaviour
     {
         Vector3 Position = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         righ.velocity = Position * speed;
+
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
+        
+
+        if (Input.GetKeyDown(KeyCode.Space) && recarregar == false && dashes==0)
+        {
+           Dash(x, y);
+           TempoDashInicial = Time.time;
+           dashes++;
+        }
+        else if(Input.GetKeyDown(KeyCode.Space) && recarregar == false && dashes == 1)
+        {
+           Dash(x, y);
+           TempoDashInicial = Time.time;
+           recarregar = true;
+        }
+        if (Time.time >= TempoDashInicial + TempoDashMax && recarregar == true)
+        {
+           recarregar = false;
+           dashes = 0;
+        }
     }
 
     void Start()
     {
         Vida = vidaInicial;
         righ = GetComponent<Rigidbody2D>();
-        
     }
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    public void Dash(float x, float y)
+    {
+        Vector2 direction = new Vector2(x, y);
+        righ.AddForce(direction * dashSpeed, ForceMode2D.Impulse);//força e modo respectivamente? no caso o direction vira um vetor ao ser adicionado força a ele 
     }
 }
+

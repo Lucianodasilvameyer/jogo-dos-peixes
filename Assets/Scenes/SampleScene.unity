@@ -470,9 +470,9 @@ GameObject:
   m_Component:
   - component: {fileID: 324276342}
   - component: {fileID: 324276341}
-  - component: {fileID: 324276340}
   - component: {fileID: 324276339}
   - component: {fileID: 324276338}
+  - component: {fileID: 324276340}
   m_Layer: 0
   m_Name: Player
   m_TagString: Peixe
@@ -539,7 +539,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dccec278c2415b64bb0dab1f0b1bd22b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashes: 0
   speed: 8
+  dashSpeed: 200
+  recarregar: 0
+  TempoDashMax: 6
   vidaMax: 10
   vidaInicial: 10
   slider_: {fileID: 31761726}

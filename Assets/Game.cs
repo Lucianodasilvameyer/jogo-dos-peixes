@@ -26,6 +26,6 @@ public class Game : MonoBehaviour
     public void spawnarInimigos(int quantidadeDeInimigos, float distanciaMin,float distanciaMax, float heighMax, Vector2 initialPos )
     {
         Vector2 position = player_ref.transform.position;
-        position.x=
+        
     }
 }
