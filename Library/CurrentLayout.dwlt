@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 3}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -68,7 +68,7 @@ MonoBehaviour:
     y: 0
     width: 1262
     height: 925
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &4
 MonoBehaviour:
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_MinSize: {x: 887, y: 494}
   m_MaxSize: {x: 16012, y: 14044}
   vertical: 0
-  controlID: 16
+  controlID: 117
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -372,7 +372,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 1
+    m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
@@ -386,18 +386,18 @@ MonoBehaviour:
       y: 17
       width: 251
       height: 529
-    m_Scale: {x: 0.41602468, y: 0.41602468}
-    m_Translation: {x: 123.95696, y: 264.5}
+    m_Scale: {x: 0.31375, y: 0.31375}
+    m_Translation: {x: 125.5, y: 264.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -297.95578
-      y: -635.7796
-      width: 603.3296
-      height: 1271.5592
+      x: -400
+      y: -843.0279
+      width: 800
+      height: 1686.0558
     m_MinimalGUI: 1
   m_defaultScale: 0.31375
   m_TargetTexture: {fileID: 0}
@@ -436,7 +436,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: dc270000
+      m_SelectedIDs: a8280000
       m_LastClickedID: 0
       m_ExpandedIDs: 8cfbffff
       m_RenameOverlay:
@@ -524,9 +524,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.9066909, y: 1.0172975, z: -5.4414062}
+    m_Target: {x: -1.0947342, y: -0.04898065, z: -5.4414062}
     speed: 2
-    m_Value: {x: -0.9066909, y: 1.0172975, z: -5.4414062}
+    m_Value: {x: -1.0947342, y: -0.04898065, z: -5.4414062}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -688,20 +688,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/scripts
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
-  - Assets
+  - Assets/scripts
   m_LastFoldersGridSize: 57
   m_LastProjectPath: C:\Users\Luciano\Documents\Corel\jogo-dos-peixes
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1e2b0000
-    m_LastClickedID: 11038
-    m_ExpandedIDs: 000000001e2b000000ca9a3b
+    m_SelectedIDs: 142c0000
+    m_LastClickedID: 11284
+    m_ExpandedIDs: 00000000202b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -729,7 +729,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: a2ab0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001e2b0000
+    m_ExpandedIDs: 00000000202b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -838,7 +838,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 11864
+  m_LastSelectedObjectID: -1158
 --- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
