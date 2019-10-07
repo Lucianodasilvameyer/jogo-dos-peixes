@@ -4,27 +4,34 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
+    
+
+   
+
+    [SerializeField]
+    PlayerUI playerUI_ref;
+
     public int dashes = 0;
 
-    public float speed;
-    public float dashSpeed;
+    public int speed;
+    public int dashSpeed;
 
 
     private int direction;
 
     public bool recarregar = false;
 
-    public GameObject projetilPrefab;
+    //public GameObject projetilPrefab;
 
-
+    [SerializeField]
     Game game_ref;
 
 
 
-    private float TempoDashInicial;
+    public int TempoDashInicial;
 
-    [SerializeField]
-    private float TempoDashMax;
+    
+    public int TempoDashMax;
 
 
 
@@ -43,14 +50,14 @@ public class Player : MonoBehaviour
     [SerializeField]
     private int HPMax;
 
-    [SerializeField]
-    private int vidaInicial;
+  /*  [SerializeField]
+    private int vidaInicial=50;*/
 
     [SerializeField]
     Slider sliderHp;
 
     [SerializeField]
-    private int hp = 50;
+    private int hp;// no inspector o h fica maiusculo?
 
     public int HP
     {
@@ -124,9 +131,13 @@ public class Player : MonoBehaviour
     void Start()
     {
         //como fazer uma referencia para usar metodos de outra classe sem ser por tag e assim usando menos memoria?
+        
 
-        HP = 50;
+        HP = 50;//não é necessario setar o valor aqui?
         righ = GetComponent<Rigidbody2D>();
+
+        playerUI_ref = gameObject.GetComponent<PlayerUI>();
+        game_ref = gameObject.GetComponent<Game>();
     }
     // Update is called once per frame
     void Update()
@@ -151,5 +162,6 @@ public class Player : MonoBehaviour
         Instantiate(projetilPrefab, position, Quaternion.identity);
 
     }*/
+   
 }
 

@@ -12,10 +12,11 @@ public class Game : MonoBehaviour
 
     public GameObject[] inimigosPrefab;
 
-    public Player player_ref;
+    [SerializeField]
+    Player player_ref;
     void Start()
     {
-        
+        player_ref = gameObject.GetComponent<Player>();
     }
 
     // Update is called once per frame

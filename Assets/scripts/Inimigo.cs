@@ -47,16 +47,17 @@ public class Inimigo : MonoBehaviour
         {
             target = GameObject.FindGameObjectWithTag("Player").transform;
 
-            direction = target.position - transform.position;
-            direction = direction.normalized;
+            
         }
+        direction = target.position - transform.position; //pq o direction tem q ir fora do if?
+        direction = direction.normalized;
     }
     public void somPlay(AudioClip som)
     {
         audioSource.clip = som;
         audioSource.Play();
     }
-    public virtual void CausarDano(Player alvo)//pq usar este virtual se não á metodos com overload?
+    public void CausarDano(Player alvo)//pq usar este virtual se não á metodos com overload?
     {
         alvo.TomarDano((int)strength);
     }
