@@ -6,6 +6,7 @@ public class PiranhaPowerUp : MonoBehaviour
 {
 
     public GameObject PowerUpPrefab;
+    public GameObject piranhaPowerUp;
 
     [SerializeField]
     Piranha piranha_ref;
@@ -30,6 +31,8 @@ public class PiranhaPowerUp : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             piranha_ref.Cardume();
+            Destroy(piranhaPowerUp);
+            
         }
     }
     

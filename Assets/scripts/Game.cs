@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
+    public static Game instance;//aqui só cria uma vez este objeto
+    
     // Start is called before the first frame update
 
     public GameObject[] inimigosPrefab;

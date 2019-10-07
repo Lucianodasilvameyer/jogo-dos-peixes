@@ -1072,10 +1072,16 @@ MonoBehaviour:
   dashSpeed: 5
   recarregar: 0
   game_ref: {fileID: 274100605}
+  TempoDashInicial: 0
   TempoDashMax: 8
   HPMax: 0
   sliderHp: {fileID: 31761726}
   hp: 0
+  UmPiranha: {fileID: 0}
+  DuasPiranhas: {fileID: 0}
+  TresPiranhas: {fileID: 0}
+  QuatroPiranhas: {fileID: 0}
+  CincoPiranhas: {fileID: 0}
 --- !u!212 &917988484
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1224,7 +1230,7 @@ PrefabInstance:
     - target: {fileID: 3436004475382672019, guid: 97a65285613358042a4a188083cac7b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3436004475382672019, guid: 97a65285613358042a4a188083cac7b0,
         type: 3}
@@ -1253,6 +1259,35 @@ PrefabInstance:
       objectReference: {fileID: 1191492710}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a65285613358042a4a188083cac7b0, type: 3}
+--- !u!1 &1060683611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3244760615341625508, guid: 343719c5fbed6334897abc6fa13c1008,
+    type: 3}
+  m_PrefabInstance: {fileID: 3244760616305388695}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1060683617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060683611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dccec278c2415b64bb0dab1f0b1bd22b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUI_ref: {fileID: 0}
+  dashes: 0
+  speed: 6
+  dashSpeed: 3
+  recarregar: 0
+  game_ref: {fileID: 0}
+  TempoDashInicial: 0
+  TempoDashMax: 8
+  HPMax: 0
+  sliderHp: {fileID: 31761726}
+  hp: 50
 --- !u!1 &1108979631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,11 +1346,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PowerUpPrefab: {fileID: 0}
-  Piranha: {fileID: 0}
-  DuasPiranhas: {fileID: 0}
-  TresPiranhas: {fileID: 0}
-  QuatroPiranhas: {fileID: 0}
-  CincoPiranhas: {fileID: 0}
+  piranhaPowerUp: {fileID: 0}
+  piranha_ref: {fileID: 0}
   player_ref: {fileID: 0}
 --- !u!212 &1108979634
 SpriteRenderer:
@@ -1411,6 +1443,7 @@ MonoBehaviour:
   armadura: 1
   reativarArmaduraMax: 6
   tubarao_ref: {fileID: 1830183322}
+  cascudo_ref: {fileID: 0}
 --- !u!4 &1191492711
 Transform:
   m_ObjectHideFlags: 0
@@ -1510,10 +1543,16 @@ MonoBehaviour:
   dashSpeed: 5
   recarregar: 0
   game_ref: {fileID: 274100605}
+  TempoDashInicial: 0
   TempoDashMax: 8
   HPMax: 0
   sliderHp: {fileID: 31761726}
   hp: 0
+  UmPiranha: {fileID: 0}
+  DuasPiranhas: {fileID: 0}
+  TresPiranhas: {fileID: 0}
+  QuatroPiranhas: {fileID: 0}
+  CincoPiranhas: {fileID: 0}
 --- !u!212 &1198021650
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1835,8 +1874,8 @@ Transform:
   m_LocalPosition: {x: 11.363847, y: 2.2101548, z: -5.4023438}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2056447632}
   - {fileID: 91104801}
+  - {fileID: 2056447632}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2250,10 +2289,16 @@ MonoBehaviour:
   dashSpeed: 5
   recarregar: 0
   game_ref: {fileID: 274100605}
+  TempoDashInicial: 0
   TempoDashMax: 8
   HPMax: 0
   sliderHp: {fileID: 31761726}
   hp: 0
+  UmPiranha: {fileID: 0}
+  DuasPiranhas: {fileID: 0}
+  TresPiranhas: {fileID: 0}
+  QuatroPiranhas: {fileID: 0}
+  CincoPiranhas: {fileID: 0}
 --- !u!212 &1693219941
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2357,6 +2402,7 @@ MonoBehaviour:
   dashSpeed: 0
   recarregar: 0
   game_ref: {fileID: 0}
+  TempoDashInicial: 0
   TempoDashMax: 0
   HPMax: 0
   sliderHp: {fileID: 0}
@@ -2478,10 +2524,16 @@ MonoBehaviour:
   dashSpeed: 5
   recarregar: 0
   game_ref: {fileID: 274100605}
+  TempoDashInicial: 0
   TempoDashMax: 8
   HPMax: 0
   sliderHp: {fileID: 31761726}
   hp: 0
+  UmPiranha: {fileID: 0}
+  DuasPiranhas: {fileID: 0}
+  TresPiranhas: {fileID: 0}
+  QuatroPiranhas: {fileID: 0}
+  CincoPiranhas: {fileID: 0}
 --- !u!212 &1980343548
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2567,6 +2619,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1340118626260223344, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
+        type: 3}
+      propertyPath: playerUI_ref
+      value: 
+      objectReference: {fileID: 1191492710}
+    - target: {fileID: 1340118626260223344, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
+        type: 3}
+      propertyPath: game_ref
+      value: 
+      objectReference: {fileID: 274100605}
+    - target: {fileID: 1340118626260223344, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
+        type: 3}
+      propertyPath: sliderHp
+      value: 
+      objectReference: {fileID: 31761726}
     - target: {fileID: 1340118626260223346, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2622,21 +2689,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1340118626260223344, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
-        type: 3}
-      propertyPath: playerUI_ref
-      value: 
-      objectReference: {fileID: 1191492710}
-    - target: {fileID: 1340118626260223344, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
-        type: 3}
-      propertyPath: game_ref
-      value: 
-      objectReference: {fileID: 274100605}
-    - target: {fileID: 1340118626260223344, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
-        type: 3}
-      propertyPath: sliderHp
-      value: 
-      objectReference: {fileID: 31761726}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
 --- !u!1001 &3244760616305388695
@@ -2650,6 +2702,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UmPiranha
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244760615341625508, guid: 343719c5fbed6334897abc6fa13c1008,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3244760615341625519, guid: 343719c5fbed6334897abc6fa13c1008,
         type: 3}

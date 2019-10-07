@@ -14,6 +14,9 @@ public class PlayerUI : MonoBehaviour
     [SerializeField]
     Tubarao tubarao_ref;
 
+    [SerializeField]
+    Cascudo cascudo_ref;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +25,8 @@ public class PlayerUI : MonoBehaviour
 
       if(Time.time>=reativarArmaduraInicial+reativarArmaduraMax && armadura == false)
       {
-            
-            tubarao_ref.ataqueDefendido = true;
+
+            cascudo_ref.ataqueDefendido = true;
             
             
       }   

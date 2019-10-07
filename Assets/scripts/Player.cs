@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     
-
+    
    
 
     [SerializeField]
@@ -21,17 +21,16 @@ public class Player : MonoBehaviour
 
     public bool recarregar = false;
 
-    //public GameObject projetilPrefab;
-
-    [SerializeField]
-    Game game_ref;
+    //public GameObject projetilPrefab;  
 
 
 
-    public int TempoDashInicial;
+
+
+    public float TempoDashInicial;
 
     
-    public int TempoDashMax;
+    public float TempoDashMax;
 
 
 
@@ -57,7 +56,7 @@ public class Player : MonoBehaviour
     Slider sliderHp;
 
     [SerializeField]
-    private int hp;// no inspector o h fica maiusculo?
+    private int hp;// no inspector o h fica maiusculo?sim
 
     public int HP
     {
@@ -109,22 +108,21 @@ public class Player : MonoBehaviour
         float y = Input.GetAxisRaw("Vertical");
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && recarregar == false && dashes == 0)
-        {
-            Dash(x, y);
-            TempoDashInicial = Time.time;
-            dashes++;
-        }
-        else if (Input.GetKeyDown(KeyCode.Space) && recarregar == false && dashes == 1)
+        if (Input.GetKeyDown(KeyCode.Space) && recarregar == false)
         {
             Dash(x, y);
             TempoDashInicial = Time.time;
             recarregar = true;
+
+            Game.instance.spawnarInimigos();
+
+
         }
+        
         if (Time.time >= TempoDashInicial + TempoDashMax && recarregar == true)
         {
             recarregar = false;
-            dashes = 0;
+            
         }
     }
 
@@ -133,7 +131,7 @@ public class Player : MonoBehaviour
         //como fazer uma referencia para usar metodos de outra classe sem ser por tag e assim usando menos memoria?
         
 
-        HP = 50;//não é necessario setar o valor aqui?
+        //HP = 50;//não é necessario setar o valor aqui?
         righ = GetComponent<Rigidbody2D>();
 
         playerUI_ref = gameObject.GetComponent<PlayerUI>();
