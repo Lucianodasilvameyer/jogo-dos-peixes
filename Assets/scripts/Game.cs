@@ -28,8 +28,8 @@ public class Game : MonoBehaviour
         if (Time.time >= Player.scripPlayer.TempoDashInicial + Player.scripPlayer.TempoDashMax && Player.scripPlayer.recarregar == true)
         {
             Player.scripPlayer.recarregar = false;
-
         }
+
         if (Time.time >= Cascudo.scriptCascudo.reativarArmaduraInicial + Cascudo.scriptCascudo.reativarArmaduraMax && Cascudo.scriptCascudo.armadura == false)
         {
 

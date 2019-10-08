@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Piranha : Player
 {
+
+
     public static Piranha scriptPiranha;
+
+    SpriteRenderer spriteRenderer;
 
     public GameObject UmPiranha;
     public GameObject DuasPiranhas;
@@ -12,11 +16,13 @@ public class Piranha : Player
     public GameObject QuatroPiranhas;
     public GameObject CincoPiranhas;
 
-    // Start is called before the first frame update
-    void Start()
+    // Start is called before the first frame update,
+    private void Awake()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
+
+   
 
     // Update is called once per frame
     void Update()
@@ -25,7 +31,9 @@ public class Piranha : Player
     }
     public void Cardume()
     {
-        if (UmPiranha.activeInHierarchy == true)
+        
+
+        /*if (UmPiranha.activeInHierarchy == true)
         {
             UmPiranha.SetActive(false);
             DuasPiranhas.SetActive(true);
@@ -44,7 +52,7 @@ public class Piranha : Player
         {
             QuatroPiranhas.SetActive(false);
             CincoPiranhas.SetActive(true);
-        }
+        }*/
 
     }
 }

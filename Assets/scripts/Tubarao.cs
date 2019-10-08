@@ -18,12 +18,20 @@ public class Tubarao : Inimigo
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            var inimigo = collision.gameObject.GetComponent<Inimigo>();
+            Debug.Log("colidiu");
 
-            if (inimigo != null)  //dentro do colisor a referencia é assim?
+            //dentro do colisor a referencia é assim?
+
+            var player = collision.gameObject.GetComponent<Player>();//se o peixe é filho do player ele  tem o componente player
+
+            if(player != null)
             {
-                inimigo.CausarDano(); 
+                CausarDano(player);
+                Debug.Log("acertou");
             }
+
+             
+            
 
             //variavel temporaria para armazenar classe, caso o objeto que colidiu tenha essa classe //importante esta é a forma de fazer referencia dentro da colisão
             var cascudo = collision.gameObject.GetComponent<Cascudo>();
