@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Inimigo : MonoBehaviour
 {
-    public AudioSource audioSource;
-    public AudioClip SomDeColisao;
+    public static Inimigo scriptInimigo; 
 
     [SerializeField]
     protected float strength; //o q é protected?
@@ -37,11 +36,7 @@ public class Inimigo : MonoBehaviour
        
         transform.Translate(speed* direction* Time.deltaTime);
     }
-    
-
-
-
-    public void DefinirAlvo()
+     public void DefinirAlvo()
     {
         if(!target || target == null)
         {
@@ -52,11 +47,7 @@ public class Inimigo : MonoBehaviour
         direction = target.position - transform.position; //pq o direction tem q ir fora do if?
         direction = direction.normalized;
     }
-    public void somPlay(AudioClip som)
-    {
-        audioSource.clip = som;
-        audioSource.Play();
-    }
+    
     public void CausarDano(Player alvo)//pq usar este virtual se não á metodos com overload?
     {
         alvo.TomarDano((int)strength);

@@ -6,19 +6,14 @@ public class PiranhaPowerUp : MonoBehaviour
 {
 
     public GameObject PowerUpPrefab;
-    public GameObject piranhaPowerUp;
-
-    [SerializeField]
-    Piranha piranha_ref;
-
-
+    
     [SerializeField]
     Player player_ref;
 
     // Start is called before the first frame update
     void Start()
     {
-        piranha_ref = gameObject.GetComponent<Piranha>();
+        
     }
 
     // Update is called once per frame
@@ -30,8 +25,13 @@ public class PiranhaPowerUp : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            piranha_ref.Cardume();
-            Destroy(piranhaPowerUp);
+            var piranha = collision.gameObject.GetComponent<Piranha>();
+
+            if(piranha != null)
+            {
+                piranha.Cardume();
+            }
+            Destroy(PowerUpPrefab);
             
         }
     }

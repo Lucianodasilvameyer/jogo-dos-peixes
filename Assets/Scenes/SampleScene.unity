@@ -527,7 +527,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inimigosPrefab: []
-  player_ref: {fileID: 324276340}
 --- !u!4 &274100606
 Transform:
   m_ObjectHideFlags: 0
@@ -542,18 +541,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &324276340 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1340118626260223344, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1340118625946965252}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dccec278c2415b64bb0dab1f0b1bd22b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &427959710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1066,12 +1053,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de43646e3f395244a9019b75c116339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerUI_ref: {fileID: 1191492710}
+  reinstancia: {fileID: 0}
   dashes: 0
   speed: 6
   dashSpeed: 5
   recarregar: 0
-  game_ref: {fileID: 274100605}
   TempoDashInicial: 0
   TempoDashMax: 8
   HPMax: 0
@@ -1277,12 +1263,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dccec278c2415b64bb0dab1f0b1bd22b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerUI_ref: {fileID: 0}
+  reinstancia: {fileID: 0}
   dashes: 0
   speed: 6
   dashSpeed: 3
   recarregar: 0
-  game_ref: {fileID: 0}
   TempoDashInicial: 0
   TempoDashMax: 8
   HPMax: 0
@@ -1537,12 +1522,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de43646e3f395244a9019b75c116339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerUI_ref: {fileID: 1191492710}
+  reinstancia: {fileID: 0}
   dashes: 0
   speed: 6
   dashSpeed: 5
   recarregar: 0
-  game_ref: {fileID: 274100605}
   TempoDashInicial: 0
   TempoDashMax: 8
   HPMax: 0
@@ -2283,12 +2267,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de43646e3f395244a9019b75c116339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerUI_ref: {fileID: 1191492710}
+  reinstancia: {fileID: 0}
   dashes: 0
   speed: 6
   dashSpeed: 5
   recarregar: 0
-  game_ref: {fileID: 274100605}
   TempoDashInicial: 0
   TempoDashMax: 8
   HPMax: 0
@@ -2396,12 +2379,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dccec278c2415b64bb0dab1f0b1bd22b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerUI_ref: {fileID: 0}
+  reinstancia: {fileID: 0}
   dashes: 0
   speed: 0
   dashSpeed: 0
   recarregar: 0
-  game_ref: {fileID: 0}
   TempoDashInicial: 0
   TempoDashMax: 0
   HPMax: 0
@@ -2518,12 +2500,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de43646e3f395244a9019b75c116339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerUI_ref: {fileID: 1191492710}
+  reinstancia: {fileID: 0}
   dashes: 0
   speed: 6
   dashSpeed: 5
   recarregar: 0
-  game_ref: {fileID: 274100605}
   TempoDashInicial: 0
   TempoDashMax: 8
   HPMax: 0
@@ -2634,6 +2615,21 @@ PrefabInstance:
       propertyPath: sliderHp
       value: 
       objectReference: {fileID: 31761726}
+    - target: {fileID: 1340118626260223344, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
+        type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1340118626260223344, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
+        type: 3}
+      propertyPath: TempoDashMax
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1340118626260223344, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
+        type: 3}
+      propertyPath: hp
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1340118626260223346, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2706,7 +2702,7 @@ PrefabInstance:
     - target: {fileID: 3244760615341625508, guid: 343719c5fbed6334897abc6fa13c1008,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3244760615341625519, guid: 343719c5fbed6334897abc6fa13c1008,
         type: 3}
@@ -2778,6 +2774,31 @@ PrefabInstance:
       propertyPath: sliderHp
       value: 
       objectReference: {fileID: 31761726}
+    - target: {fileID: 3244760615341625505, guid: 343719c5fbed6334897abc6fa13c1008,
+        type: 3}
+      propertyPath: dashSpeed
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244760615341625505, guid: 343719c5fbed6334897abc6fa13c1008,
+        type: 3}
+      propertyPath: HPMax
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244760615341625505, guid: 343719c5fbed6334897abc6fa13c1008,
+        type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244760615341625505, guid: 343719c5fbed6334897abc6fa13c1008,
+        type: 3}
+      propertyPath: TempoDashMax
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244760615341625505, guid: 343719c5fbed6334897abc6fa13c1008,
+        type: 3}
+      propertyPath: hp
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 343719c5fbed6334897abc6fa13c1008, type: 3}
 --- !u!1001 &3436004476729489304

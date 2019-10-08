@@ -4,60 +4,35 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
-    
-    
-   
+    public static Player scripPlayer;
 
-    [SerializeField]
-    PlayerUI playerUI_ref;
+    public bool isLambari = false;
+
+    Rigidbody2D righ;
 
     public int dashes = 0;
 
     public int speed;
-    public int dashSpeed;
 
+    public int dashSpeed;
 
     private int direction;
 
     public bool recarregar = false;
 
-    //public GameObject projetilPrefab;  
-
-
-
-
-
+    //public GameObject projetilPrefab;
+    
     public float TempoDashInicial;
 
-    
     public float TempoDashMax;
-
-
-
-
-
-
-
-
-    Rigidbody2D righ;
-
-
-
-
-    bool isDead = false;
 
     [SerializeField]
     private int HPMax;
 
-  /*  [SerializeField]
-    private int vidaInicial=50;*/
-
-    [SerializeField]
-    Slider sliderHp;
-
     [SerializeField]
     private int hp;// no inspector o h fica maiusculo?sim
 
+    
     public int HP
     {
         get
@@ -66,38 +41,32 @@ public class Player : MonoBehaviour
         }
         set
         {
-            hp = value; //não deveria colocalo no else?
+            hp = value; 
 
             if (hp <= 0)
             {
                 hp = 0;
 
-                if (sliderHp && sliderHp != null)// aqui garante q não tem referencias?
-                    sliderHp.value = 0;
+                if (Interface.ScriptInterface.sliderHp && Interface.ScriptInterface.sliderHp != null)// aqui garante q não tem referencias?
+                    Interface.ScriptInterface.sliderHp.value = 0;
             }
             else if (hp >= HPMax)
             {
                 hp = HPMax;
 
-                if (sliderHp && sliderHp != null)
-                    sliderHp.value = 1;
+                if (Interface.ScriptInterface.sliderHp && Interface.ScriptInterface.sliderHp != null)
+                    Interface.ScriptInterface.sliderHp.value = 1;
 
             }
             else
             {
-                if (sliderHp && sliderHp != null)
-                    sliderHp.value = (float)hp / (float)HPMax; //colocar como float para poder trabalhar com valores de vida com virgula futuramente?
+                if (Interface.ScriptInterface.sliderHp && Interface.ScriptInterface.sliderHp != null)
+                    Interface.ScriptInterface.sliderHp.value = (float)hp / (float)HPMax; //colocar como float para poder trabalhar com valores de vida com virgula futuramente?
             }
 
         }
     }
 
-
-
-
-
-
-    // Start is called before the first frame update
     private void FixedUpdate()
     {
 
@@ -107,37 +76,25 @@ public class Player : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-
-        if (Input.GetKeyDown(KeyCode.Space) && recarregar == false)
+        if (!isLambari)
         {
-            Dash(x, y);
-            TempoDashInicial = Time.time;
-            recarregar = true;
+            if (Input.GetKeyDown(KeyCode.Space) && recarregar == false)
+            {
+                Dash(x, y);
+                TempoDashInicial = Time.time;
+                recarregar = true;
+            }
 
-            Game.instance.spawnarInimigos();
-
-
-        }
-        
-        if (Time.time >= TempoDashInicial + TempoDashMax && recarregar == true)
-        {
-            recarregar = false;
             
         }
+        
     }
 
     void Start()
     {
-        //como fazer uma referencia para usar metodos de outra classe sem ser por tag e assim usando menos memoria?
-        
-
-        //HP = 50;//não é necessario setar o valor aqui?
         righ = GetComponent<Rigidbody2D>();
-
-        playerUI_ref = gameObject.GetComponent<PlayerUI>();
-        game_ref = gameObject.GetComponent<Game>();
     }
-    // Update is called once per frame
+    
     void Update()
     {
 

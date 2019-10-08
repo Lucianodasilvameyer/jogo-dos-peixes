@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class Cascudo : Player
 {
+    public static Cascudo scriptCascudo;
+
+    public bool armadura = true;
+
     public bool ataqueDefendido = true;
 
-    [SerializeField]
-    PlayerUI playerUI_ref;
+    public int reativarArmaduraInicial;
 
-    [SerializeField]
-    Inimigo inimigo_ref;
+    public int reativarArmaduraMax;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        playerUI_ref = gameObject.GetComponent<PlayerUI>();
-        inimigo_ref = gameObject.GetComponent<Inimigo>();
+       
     }
 
     // Update is called once per frame
@@ -29,13 +32,17 @@ public class Cascudo : Player
         if (ataqueDefendido == true)
         {
             ataqueDefendido = false;
-            playerUI_ref.Togglearmadura();
+            Togglearmadura();
         }
         else if (ataqueDefendido == false)
         {
 
-            inimigo_ref.CausarDano(this);
+            Inimigo.scriptInimigo.CausarDano(this);
 
         }
+    }
+    public void Togglearmadura()
+    {
+        armadura = !armadura;
     }
 }

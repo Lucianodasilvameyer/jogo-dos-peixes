@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Piranha : Player
 {
+    public static Piranha scriptPiranha;
+
     public GameObject UmPiranha;
     public GameObject DuasPiranhas;
     public GameObject TresPiranhas;
@@ -19,7 +21,7 @@ public class Piranha : Player
     // Update is called once per frame
     void Update()
     {
-        
+        Cardume();
     }
     public void Cardume()
     {
