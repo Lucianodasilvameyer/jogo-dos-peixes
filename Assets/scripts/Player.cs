@@ -117,6 +117,10 @@ public class Player : MonoBehaviour
         Instantiate(projetilPrefab, position, Quaternion.identity);
 
     }*/
+    public void Comer()
+    {
+        Game.scriptGame.Contagem += 5;
+    }
    
 }
 

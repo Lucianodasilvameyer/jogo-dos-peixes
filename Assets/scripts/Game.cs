@@ -8,6 +8,16 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
+    public Text displayContagem;
+
+    Text textGameOver;
+
+    bool gameOver = false;
+    
+
+    //public TextMeshProUGUI textoGameOver;
+
+    public int Contagem;          
     
     public static Game scriptGame;
 
@@ -19,10 +29,23 @@ public class Game : MonoBehaviour
 
     void Start()
     {
+        if (Contagem >= 0)
+        {
+            InvokeRepeating("diminui", 1, 1);
+        }
+        else
+        {
 
+            textGameOver.gameObject.SetActive(true);
+        }
+    }
+    void diminui()
+    {
+        Contagem -= 1;
+        displayContagem.text = Contagem.ToString();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (Time.time >= Player.scripPlayer.TempoDashInicial + Player.scripPlayer.TempoDashMax && Player.scripPlayer.recarregar == true)
@@ -36,6 +59,11 @@ public class Game : MonoBehaviour
             Cascudo.scriptCascudo.ataqueDefendido = true;
         }
 
+
+        
+
+
+
     }
     public void spawnarInimigos(int quantidadeDeInimigos, float distanciaMin, float distanciaMax, float heighMax, Vector2 initialPos)
     {
@@ -47,4 +75,31 @@ public class Game : MonoBehaviour
         audioSource.clip = som;
         audioSource.Play();
     }
+    //public bool isGameOver()
+    //{
+       // return gameOver;
+    //}
+
+    //public void GameOver()
+    //{
+      //  textoGameOver.text = "GameOver";
+        //gameOver = true;
+        //player_ref.GetComponent<SpriteRenderer>().enabled = false;
+        
+
+        
+   // }
+    /* public void contagemRegressiva()
+       {
+         if (Contagem > 0.0f)
+         {
+             Contagem -= Time.deltaTime;
+             displayContagem.text = Contagem.ToString();
+
+         }
+         else
+         {
+             displayContagem.text = "Morreu de fome!";
+         }
+       }*/
 }
