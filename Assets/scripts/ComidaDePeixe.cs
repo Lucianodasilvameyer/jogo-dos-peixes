@@ -5,6 +5,7 @@ using UnityEngine;
 public class ComidaDePeixe : MonoBehaviour
 {
     ComidaDePeixe comidaDePeixe;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,14 +19,14 @@ public class ComidaDePeixe : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.tag == ("Player"))
         {
             var player = collision.gameObject.GetComponent<Player>();
 
             if(player != null)
             {
-                Player.scripPlayer.Comer();
-                Destroy(comidaDePeixe);
+                Player.Comer();
+                Destroy(this.gameObject);
             }
         }
     }

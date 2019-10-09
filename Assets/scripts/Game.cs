@@ -29,7 +29,7 @@ public class Game : MonoBehaviour
 
     void Start()
     {
-        if (Contagem >= 0)
+        if (Contagem > 0)
         {
             InvokeRepeating("diminui", 1, 1);
         }
