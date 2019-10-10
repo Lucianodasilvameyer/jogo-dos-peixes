@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Cascudo : Player
 {
-    public static Cascudo scriptCascudo;
+    Inimigo inimigo = new Inimigo();//dessa forma não é necessario arrastar?
+
+    //public static Cascudo scriptCascudo;
 
     public bool armadura = true;
 
@@ -29,6 +31,8 @@ public class Cascudo : Player
     }
     public void Defender()
     {
+        
+
         if (ataqueDefendido == true)
         {
             ataqueDefendido = false;
@@ -37,7 +41,7 @@ public class Cascudo : Player
         else if (ataqueDefendido == false)
         {
 
-            Inimigo.scriptInimigo.CausarDano(this);
+            inimigo.CausarDano(this);
 
         }
     }

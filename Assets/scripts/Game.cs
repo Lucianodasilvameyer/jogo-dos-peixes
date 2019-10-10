@@ -8,24 +8,27 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
+    [SerializeField]
+    Player player_ref;
+
+    [SerializeField]
+    Cascudo cascudo_ref;
+
     public Text displayContagem;
 
     Text textGameOver;
 
     bool gameOver = false;
-    
-
-    //public TextMeshProUGUI textoGameOver;
+        
 
     public int Contagem;          
     
-    public static Game scriptGame;
 
     public AudioSource audioSource;
     public AudioClip SomDeColisao;
 
     public GameObject[] inimigosPrefab;
-    Player player_ref;
+    
 
     void Start()
     {
@@ -48,22 +51,16 @@ public class Game : MonoBehaviour
 
     void Update()
     {
-        if (Time.time >= Player.scripPlayer.TempoDashInicial + Player.scripPlayer.TempoDashMax && Player.scripPlayer.recarregar == true)
+        if (Time.time >= player_ref.TempoDashInicial + player_ref.TempoDashMax && player_ref.recarregar == true)
         {
-            Player.scripPlayer.recarregar = false;
+            player_ref.recarregar = false;
         }
 
-        if (Time.time >= Cascudo.scriptCascudo.reativarArmaduraInicial + Cascudo.scriptCascudo.reativarArmaduraMax && Cascudo.scriptCascudo.armadura == false)
+        if (Time.time >= cascudo_ref.reativarArmaduraInicial + cascudo_ref.reativarArmaduraMax && cascudo_ref.armadura == false)
         {
 
-            Cascudo.scriptCascudo.ataqueDefendido = true;
+            cascudo_ref.ataqueDefendido = true;
         }
-
-
-        
-
-
-
     }
     public void spawnarInimigos(int quantidadeDeInimigos, float distanciaMin, float distanciaMax, float heighMax, Vector2 initialPos)
     {
@@ -75,31 +72,5 @@ public class Game : MonoBehaviour
         audioSource.clip = som;
         audioSource.Play();
     }
-    //public bool isGameOver()
-    //{
-       // return gameOver;
-    //}
-
-    //public void GameOver()
-    //{
-      //  textoGameOver.text = "GameOver";
-        //gameOver = true;
-        //player_ref.GetComponent<SpriteRenderer>().enabled = false;
-        
-
-        
-   // }
-    /* public void contagemRegressiva()
-       {
-         if (Contagem > 0.0f)
-         {
-             Contagem -= Time.deltaTime;
-             displayContagem.text = Contagem.ToString();
-
-         }
-         else
-         {
-             displayContagem.text = "Morreu de fome!";
-         }
-       }*/
+    
 }

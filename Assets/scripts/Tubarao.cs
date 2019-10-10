@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Tubarao : Inimigo
 {
+    
+
     void Start()
     {
         DefinirAlvo();
@@ -23,7 +25,7 @@ public class Tubarao : Inimigo
             //dentro do colisor a referencia é assim?
 
             var player = collision.gameObject.GetComponent<Player>();//se o peixe é filho do player ele  tem o componente player
-
+                                                 //aqui em cima salva o gameObject com o componente player na variavel temporaria var player
             if(player != null)
             {
                 CausarDano(player);

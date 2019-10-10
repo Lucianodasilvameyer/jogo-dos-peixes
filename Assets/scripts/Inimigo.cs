@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inimigo : MonoBehaviour
 {
-    public static Inimigo scriptInimigo; 
+    
 
     [SerializeField]
     protected float strength; //o q é protected?

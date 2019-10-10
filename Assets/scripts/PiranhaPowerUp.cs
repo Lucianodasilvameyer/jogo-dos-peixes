@@ -5,10 +5,13 @@ using UnityEngine;
 public class PiranhaPowerUp : MonoBehaviour
 {
 
-    public GameObject PowerUpPrefab;
+    public GameObject PowerUpPrefab;//??
     
     [SerializeField]
     Player player_ref;
+
+    [SerializeField]
+    Piranha piranha_ref;
 
     // Start is called before the first frame update
     void Start()
@@ -29,18 +32,18 @@ public class PiranhaPowerUp : MonoBehaviour
 
             if(piranha != null)
             {
-                piranha.Cardume();
+                piranha_ref.Cardume();
             }
-            Destroy(PowerUpPrefab);
+            Destroy(this);
             
         }
     }
     
-    public void spawnarPowerUp(int distanciaInimigoPlayer)
+    public void spawnarPowerUp(int distanciaPowerUpPlayer)
     {
         Vector2 position = player_ref.transform.position;
-        position.x += distanciaInimigoPlayer;
-        position.y += distanciaInimigoPlayer;
+        position.x += distanciaPowerUpPlayer;
+        position.y += distanciaPowerUpPlayer;
 
         Instantiate(PowerUpPrefab, position, Quaternion.identity);
     }

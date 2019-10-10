@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Lambari : Player
 {
+
     // Start is called before the first frame update
     
     void Start()
@@ -20,7 +21,7 @@ public class Lambari : Player
     }
     public void Doubledash()
     {
-        if (Player.scripPlayer.isLambari == true)
+        if (isLambari == true)
         {
             float x = Input.GetAxis("Horizontal");
             float y = Input.GetAxisRaw("Vertical");

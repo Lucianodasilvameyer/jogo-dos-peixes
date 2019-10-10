@@ -4,7 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
-    public static Player scripPlayer;
+
+    [SerializeField]
+    Interface interface_ref;
+
+    [SerializeField]
+    Game game_ref;
+    
 
     public bool isLambari = false;
 
@@ -47,21 +53,21 @@ public class Player : MonoBehaviour
             {
                 hp = 0;
 
-                if (Interface.ScriptInterface.sliderHp && Interface.ScriptInterface.sliderHp != null)// aqui garante q não tem referencias?
-                    Interface.ScriptInterface.sliderHp.value = 0;
+                if (interface_ref.sliderHp && interface_ref.sliderHp != null)// aqui garante q não tem referencias?
+                    interface_ref.sliderHp.value = 0;
             }
             else if (hp >= HPMax)
             {
                 hp = HPMax;
 
-                if (Interface.ScriptInterface.sliderHp && Interface.ScriptInterface.sliderHp != null)
-                    Interface.ScriptInterface.sliderHp.value = 1;
+                if (interface_ref.sliderHp && interface_ref.sliderHp != null)
+                    interface_ref.sliderHp.value = 1;
 
             }
             else
             {
-                if (Interface.ScriptInterface.sliderHp && Interface.ScriptInterface.sliderHp != null)
-                    Interface.ScriptInterface.sliderHp.value = (float)hp / (float)HPMax; //colocar como float para poder trabalhar com valores de vida com virgula futuramente?
+                if (interface_ref.sliderHp && interface_ref.sliderHp != null)
+                    interface_ref.sliderHp.value = (float)hp / (float)HPMax; //colocar como float para poder trabalhar com valores de vida com virgula futuramente?
             }
 
         }
@@ -119,7 +125,7 @@ public class Player : MonoBehaviour
     }*/
     public void Comer()
     {
-        Game.scriptGame.Contagem += 5;
+        game_ref.Contagem += 5;
     }
    
 }

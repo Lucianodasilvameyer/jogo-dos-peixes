@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Interface : MonoBehaviour
 {
-    public static Interface ScriptInterface;
+   
     
     public Slider sliderHp;
     // Start is called before the first frame update

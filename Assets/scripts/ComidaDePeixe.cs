@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class ComidaDePeixe : MonoBehaviour
 {
-    ComidaDePeixe comidaDePeixe;
+    
+
+    [SerializeField]
+    Player player_ref;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +28,8 @@ public class ComidaDePeixe : MonoBehaviour
 
             if(player != null)
             {
-                Player.Comer();
-                Destroy(this.gameObject);
+                player_ref.Comer();//aqui não falta colocar primeiro a classe?
+                Destroy(this);
             }
         }
     }

@@ -6,15 +6,11 @@ public class Piranha : Player
 {
 
 
-    public static Piranha scriptPiranha;
+    
 
     SpriteRenderer spriteRenderer;
 
-    public GameObject UmPiranha;
-    public GameObject DuasPiranhas;
-    public GameObject TresPiranhas;
-    public GameObject QuatroPiranhas;
-    public GameObject CincoPiranhas;
+   
 
     // Start is called before the first frame update,
     private void Awake()
