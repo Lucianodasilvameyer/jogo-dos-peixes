@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tubarao : Inimigo
+public class Tubarao : HabilidadesGeraisInimigo
 {
     
 
@@ -36,12 +36,12 @@ public class Tubarao : Inimigo
             
 
             //variavel temporaria para armazenar classe, caso o objeto que colidiu tenha essa classe //importante esta é a forma de fazer referencia dentro da colisão
-            var cascudo = collision.gameObject.GetComponent<Cascudo>();
+            //var cascudo = collision.gameObject.GetComponent<Cascudo>();
             //verifica se a variável não é nula
-            if (cascudo != null)
+            //if (cascudo != null)
             {
                 //executa a função desejada
-                cascudo.Defender();
+            //    cascudo.Defender();
             }
         }
     }

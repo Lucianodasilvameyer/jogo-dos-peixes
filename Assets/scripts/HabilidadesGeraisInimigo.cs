@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inimigo : MonoBehaviour
+public class HabilidadesGeraisInimigo : MonoBehaviour
 {
-    
+    [SerializeField]
+    HabilidadesGeraisPlayer habilidadesGeraisPlayer;
 
     [SerializeField]
     protected float strength; //o q é protected?
@@ -36,7 +38,13 @@ public class Inimigo : MonoBehaviour
        
         transform.Translate(speed* direction* Time.deltaTime);
     }
-     public void DefinirAlvo()
+
+    internal void CausarDano(CascudoArmadura cascudoArmadura)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void DefinirAlvo()
     {
         if(!target || target == null)
         {
@@ -47,10 +55,11 @@ public class Inimigo : MonoBehaviour
         direction = target.position - transform.position; //pq o direction tem q ir fora do if?
         direction = direction.normalized;
     }
-    
+
     public void CausarDano(Player alvo)//pq usar este virtual se não á metodos com overload?
     {
-        alvo.TomarDano((int)strength);
+        habilidadesGeraisPlayer.TomarDano((int)strength);
+
+
     }
-    
 }

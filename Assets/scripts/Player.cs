@@ -12,34 +12,34 @@ public class Player : MonoBehaviour
     Game game_ref;
     
 
-    public bool isLambari = false;
+    //public bool isLambari = false;
 
-    Rigidbody2D righ;
+    //Rigidbody2D righ;
 
     public int dashes = 0;
 
-    public int speed;
+    //public int speed;
 
-    public int dashSpeed;
+    //public int dashSpeed;
 
-    private int direction;
+    // private int direction;
 
-    public bool recarregar = false;
+    // public bool recarregar = false;
 
     //public GameObject projetilPrefab;
-    
-    public float TempoDashInicial;
 
-    public float TempoDashMax;
+    //public float TempoDashInicial;
 
-    [SerializeField]
-    private int HPMax;
+    //public float TempoDashMax;
 
-    [SerializeField]
-    private int hp;// no inspector o h fica maiusculo?sim
+    // [SerializeField]
+    //private int HPMax;
 
-    
-    public int HP
+    //[SerializeField]
+    //private int hp;// no inspector o h fica maiusculo?sim
+
+
+    /*public int HP
     {
         get
         {
@@ -71,9 +71,9 @@ public class Player : MonoBehaviour
             }
 
         }
-    }
+    }*/
 
-    private void FixedUpdate()
+    /*private void FixedUpdate()
     {
 
         Vector3 Position = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -82,8 +82,8 @@ public class Player : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        if (!isLambari)
-        {
+        //if (!isLambari)
+        //{
             if (Input.GetKeyDown(KeyCode.Space) && recarregar == false)
             {
                 Dash(x, y);
@@ -92,7 +92,7 @@ public class Player : MonoBehaviour
             }
 
             
-        }
+        //}
         
     }
 
@@ -123,10 +123,13 @@ public class Player : MonoBehaviour
         Instantiate(projetilPrefab, position, Quaternion.identity);
 
     }*/
-    public void Comer()
-    {
-        game_ref.Contagem += 5;
-    }
-   
+    /* public void Comer()
+     {
+         game_ref.Contagem += 5;
+     }*/
+    //public void TomarDano(int dano)
+    //{
+      //  hp -= dano;
+    //}
 }
 

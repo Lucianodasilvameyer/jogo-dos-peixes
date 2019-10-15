@@ -94,16 +94,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de43646e3f395244a9019b75c116339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerUI_ref: {fileID: 0}
-  dashes: 0
-  speed: 6
-  dashSpeed: 5
-  recarregar: 0
+  interface_ref: {fileID: 0}
   game_ref: {fileID: 0}
-  TempoDashMax: 8
-  HPMax: 0
-  sliderHp: {fileID: 0}
-  hp: 0
+  dashes: 0
 --- !u!50 &3244760615341625506
 Rigidbody2D:
   serializedVersion: 4

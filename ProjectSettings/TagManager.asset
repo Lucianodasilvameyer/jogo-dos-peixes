@@ -9,6 +9,7 @@ TagManager:
   - Tubarao
   - Game
   - PlayerUI
+  - PowerUp
   layers:
   - Default
   - TransparentFX

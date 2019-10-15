@@ -2,26 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cascudo : Player
+public class CascudoArmadura : HabilidadesGeraisPlayer
 {
-    Inimigo inimigo = new Inimigo();//dessa forma não é necessario arrastar?
-
-    //public static Cascudo scriptCascudo;
-
-    public bool armadura = true;
-
     public bool ataqueDefendido = true;
-
-    public int reativarArmaduraInicial;
-
-    public int reativarArmaduraMax;
-
-
-
+    HabilidadesGeraisInimigo inimigo = new HabilidadesGeraisInimigo();
+    public bool armadura = true;
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
@@ -31,7 +20,7 @@ public class Cascudo : Player
     }
     public void Defender()
     {
-        
+
 
         if (ataqueDefendido == true)
         {
