@@ -10,9 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1340118626260223346}
   - component: {fileID: 1340118626260223345}
-  - component: {fileID: 1340118626260223344}
   - component: {fileID: 1340118626260223351}
   - component: {fileID: 1340118626260223350}
+  - component: {fileID: 470428423}
+  - component: {fileID: 470428424}
+  - component: {fileID: 470428426}
+  - component: {fileID: 470428427}
   m_Layer: 0
   m_Name: Lambari
   m_TagString: Player
@@ -82,29 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1340118626260223344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340118626260223349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dccec278c2415b64bb0dab1f0b1bd22b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recarregarArmadura: 0
-  playerUI_ref: {fileID: 0}
-  dashes: 0
-  speed: 8
-  dashSpeed: 200
-  recarregar: 0
-  game_ref: {fileID: 0}
-  TempoDashMax: 6
-  HPMax: 50
-  sliderHp: {fileID: 0}
-  hp: 0
 --- !u!61 &1340118626260223351
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -152,3 +132,64 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &470428423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340118626260223349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f872a461845f649a94c594eb28dec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game_ref: {fileID: 0}
+--- !u!114 &470428424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340118626260223349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e199b15330039d4fafd39d2d3719c9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderHp: {fileID: 0}
+  HPMax: 50
+  hp: 50
+--- !u!114 &470428426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340118626260223349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2bc6f41d45da9a4481000843d31460a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 6
+--- !u!114 &470428427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340118626260223349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620764ad6a885cc4295bacde5c23af3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 200
+  maxDashes: 2
+  coolDownDoubleDash: {fileID: 0}
+  dashes: 0
+  timer: 0
+  dashCooldown: 4
+  dashDelay: 0.5
+  dashEnabled: 1

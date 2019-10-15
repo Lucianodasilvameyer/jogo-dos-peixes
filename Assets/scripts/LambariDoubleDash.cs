@@ -25,7 +25,11 @@ public class LambariDoubleDash : HabilidadesGeraisPlayer
     void Update()
     {
         Doubledash();
+        Debug.Log(DownDoubleDash.recarregar);
+        Debug.Log(dashes);
     }
+
+
     public void Doubledash()
     {
         

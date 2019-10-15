@@ -10,7 +10,7 @@ public class PlayerMovimentacao : MonoBehaviour
 
     private void Awake()
     {
-        righ.gameObject.GetComponent<Rigidbody2D>();
+        righ = GetComponent<Rigidbody2D>();
     }
     void Start()
     {
@@ -24,11 +24,7 @@ public class PlayerMovimentacao : MonoBehaviour
     }
     private void FixedUpdate()
     {
-
-        Vector3 Position = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        Vector2 Position = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         righ.velocity = Position * speed;
-
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
     }
 }

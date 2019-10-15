@@ -56,7 +56,7 @@ public class spawnarInimigos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //SpawnarInimigos(); 
     }
     public void SpawnarInimigos(int quantidadeIinimigos, float distanceMin, float distanceMax, float heightMax, Vector2 initialPos)
     {
@@ -75,7 +75,7 @@ public class spawnarInimigos : MonoBehaviour
 
 
     }
-    public void ReciclarGR()//aqui os objetos são tirados e colocados na fila
+    public void ReciclarGR()//aqui os objetos são tirados e colocados na fila?
     {
         GameObject chao = Poolchao.Dequeue();
 
