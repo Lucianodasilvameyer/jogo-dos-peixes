@@ -44,12 +44,6 @@ public class HabilidadesGeraisPlayer : MonoBehaviour
         audioSource.clip = Som;
         audioSource.Play();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("PowerUp"))
-        {
-            SomPlay(somCausarDano);
-        }
-    }
+    
 
 }
