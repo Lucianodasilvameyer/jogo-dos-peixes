@@ -7,14 +7,13 @@ public class HabilidadesGeraisPlayer : MonoBehaviour
     [SerializeField]
     AudioSource audioSource;
 
+    
+
     [SerializeField]
     AudioClip somCausarDano;
 
     [SerializeField]
-    AudioClip somTomarDano;
-
-    [SerializeField]
-    Game game_ref;
+    TempoParaComer tempoParaComer;
 
     Interface interface_ref;
     // Start is called before the first frame update
@@ -34,7 +33,7 @@ public class HabilidadesGeraisPlayer : MonoBehaviour
     }
     public void Comer()
     {
-        game_ref.Contagem += 5;
+        tempoParaComer.Contagem += 5;
     }
     public void TomarDano(int dano)
     {
@@ -44,6 +43,13 @@ public class HabilidadesGeraisPlayer : MonoBehaviour
     {
         audioSource.clip = Som;
         audioSource.Play();
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("PowerUp"))
+        {
+            SomPlay(somCausarDano);
+        }
     }
 
 }

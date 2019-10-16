@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ReutilizarBackGround : MonoBehaviour
 {
+
     ReutilizarChao reutilizarChao;
 
 
@@ -18,7 +19,7 @@ public class ReutilizarBackGround : MonoBehaviour
 
     private void Awake()
     {
-        reutilizarChao.GetComponent<ReutilizarChao>();
+        reutilizarChao = GetComponent<ReutilizarChao>();
     }
     // Start is called before the first frame update
     void Start()

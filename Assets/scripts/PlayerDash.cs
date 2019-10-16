@@ -75,8 +75,9 @@ public class PlayerDash : MonoBehaviour
         //Seta o valor do contador para zero
         timer = 0;     
         //Enquanto o valor de "timer" for menor que o cooldown do dash
-        while(timer <= dashCooldown)
+        while(timer <= dashCooldown)//o while vai rodar 10 segundos não 10 vezes
         {
+            Debug.Log(Time.fixedDeltaTime);//o Time.fixedDeltaTime repete um valor diferente a cada frame, ja o Time.deltaTime repete o mesmo valor a cada frame
             //Incrementar o valor de timer com o fixedDeltaTime
             timer += Time.fixedDeltaTime;
             //Se "timer" for maior que o valor de "dashDelay"
