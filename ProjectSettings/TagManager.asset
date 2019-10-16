@@ -10,6 +10,7 @@ TagManager:
   - Game
   - PlayerUI
   - PowerUp
+  - Slider
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - 
   - Uma Piranha
-  - 
+  - background
   - 
   - 
   - 
@@ -46,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Hud
+    uniqueID: 2373563533
     locked: 0

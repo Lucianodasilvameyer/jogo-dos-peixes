@@ -5,9 +5,9 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class spawnarInimigos : MonoBehaviour
-{
-    [SerializeField]
+//public class spawnarInimigos : MonoBehaviour
+/*{ 
+   [SerializeField]
     Player player_ref;
 
     public GameObject[] TubaraoPrefab;
@@ -54,7 +54,7 @@ public class spawnarInimigos : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   // void Update()
     {
         //SpawnarInimigos(); 
     }
@@ -100,4 +100,4 @@ public class spawnarInimigos : MonoBehaviour
         backGround.transform.position = nextPositionBG;
         nextPositionBG.x += backGround.GetComponent<SpriteRenderer>().bounds.size.x;
     }
-}
+}*/

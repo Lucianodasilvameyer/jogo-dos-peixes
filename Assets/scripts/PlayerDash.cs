@@ -8,8 +8,8 @@ public class PlayerDash : MonoBehaviour
     public int dashSpeed;
     public int maxDashes;   //Numero maximo de dashes
 
-    [SerializeField]
-    CoolDownDoubleDash coolDownDoubleDash;
+    //[SerializeField]
+    //CoolDownDoubleDash coolDownDoubleDash;
 
     [SerializeField] int dashes;                    //Contador de dashes
     [SerializeField] float timer = 0;               //Variavel que funcionará como cronometro
@@ -61,7 +61,7 @@ public class PlayerDash : MonoBehaviour
         Vector2 direction = new Vector2(x, y);
 
         righ.AddForce(direction * dashSpeed, ForceMode2D.Impulse);//força e modo respectivamente? no caso o direction vira um vetor ao ser adicionado força a ele         
-
+                                                         //dentro do parametro do righ.Addforce deve vir respectivamente um vetor e um modo?
         dashEnabled = false;
 
         dashes--;
@@ -70,7 +70,7 @@ public class PlayerDash : MonoBehaviour
         StartCoroutine("DashReload");
     }
 
-    IEnumerator DashReload()
+    IEnumerator DashReload() //o IEnumerator espera um certo tempo para executar uma coisa
     {
         //Seta o valor do contador para zero
         timer = 0;     

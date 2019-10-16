@@ -5,6 +5,15 @@ using UnityEngine;
 public class HabilidadesGeraisPlayer : MonoBehaviour
 {
     [SerializeField]
+    AudioSource audioSource;
+
+    [SerializeField]
+    AudioClip somCausarDano;
+
+    [SerializeField]
+    AudioClip somTomarDano;
+
+    [SerializeField]
     Game game_ref;
 
     Interface interface_ref;
@@ -31,4 +40,10 @@ public class HabilidadesGeraisPlayer : MonoBehaviour
     {
         interface_ref.hp -= dano;
     }
+    public void SomPlay(AudioClip Som)
+    {
+        audioSource.clip = Som;
+        audioSource.Play();
+    }
+
 }

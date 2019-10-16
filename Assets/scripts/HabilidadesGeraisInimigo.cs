@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class HabilidadesGeraisInimigo : MonoBehaviour
 {
+    AudioSource audioSource;
+    AudioClip somCausarDano;
+    AudioClip somTomarDano;
+
     [SerializeField]
     HabilidadesGeraisPlayer habilidadesGeraisPlayer;
 
@@ -61,5 +65,10 @@ public class HabilidadesGeraisInimigo : MonoBehaviour
         habilidadesGeraisPlayer.TomarDano((int)strength);
 
 
+    }
+    public void SomPlay(AudioClip Som)
+    {
+        audioSource.clip = Som;
+        audioSource.Play();
     }
 }
