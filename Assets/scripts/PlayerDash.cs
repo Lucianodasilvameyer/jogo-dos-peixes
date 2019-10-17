@@ -90,7 +90,7 @@ public class PlayerDash : MonoBehaviour
             yield return null;
         }       
         //Se o valor de "timer" for maior ou igual o valor de "dashCooldown"...
-        if(timer >= dashCooldown)
+        if(timer >= dashCooldown)//aqui apos rodar o while 10 segundos, ira rodar mais 10 segundos para o valor do dashes voltar a ser 2 
         {
             //Atribuir ao contador de dashes a quantidade máxima de dash daquele peixe
             dashes = maxDashes;

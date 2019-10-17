@@ -14,7 +14,7 @@ public class SpawnInimigo : MonoBehaviour
 
     [SerializeField]
     private float timerRespawnInimigosMax;
-
+    [SerializeField]
     Player player_ref;
 
     public GameObject[] TubaraoPrefab;
