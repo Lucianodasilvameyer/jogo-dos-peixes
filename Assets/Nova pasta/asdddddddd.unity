@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c80ed1a310f98143b8d3dfa1a2cf1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fundoPrefab: {fileID: 0}
+  fundoPrefab: {fileID: 89033246}
   proximaPosicaoFundo: {x: 0, y: 0}
 --- !u!4 &274100606
 Transform:
