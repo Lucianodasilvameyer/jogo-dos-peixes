@@ -15,9 +15,9 @@ public class SpawnInimigo : MonoBehaviour
     [SerializeField]
     private float timerRespawnInimigosMax;
     [SerializeField]
-    Player player_ref;
+    private Transform player; //esta referencia serve para pegar a posição inicial do player?
 
-    public GameObject[] TubaraoPrefab;
+    public GameObject[] InimigoPrefab;//??
     // Start is called before the first frame update
     void Start()
     {
@@ -32,13 +32,13 @@ public class SpawnInimigo : MonoBehaviour
             timerRespawnInimigos = Time.time;
 
 
-            Vector2 initialPos = player_ref.transform.position;
+            Vector2 initialPos = player.transform.position;
             initialPos.x += distanceEnemyFromPlayer;
             initialPos.y = groundLevel;// aqui o y é sempre o mesmo
 
 
 
-            SpawnarInimigos(Random.Range(2, 5), 1, 6, Random.Range(0, 5), initialPos);// o 1,6 são respectivamente a distanceMin e distanceMax entre os inimigos?
+            SpawnarInimigos(Random.Range(1, 2), 1, 6, Random.Range(0, 5), initialPos);// o 1,6 são respectivamente a distanceMin e distanceMax entre os inimigos?
         }
     }
     public void SpawnarInimigos(int quantidadeIinimigos, float distanceMin, float distanceMax, float heightMax, Vector2 initialPos)
@@ -46,12 +46,12 @@ public class SpawnInimigo : MonoBehaviour
 
         for (int i = 0; i < quantidadeIinimigos; i++)
         {
-            int index = Random.Range(0, TubaraoPrefab.Length);
+            int index = Random.Range(0, InimigoPrefab.Length);
             Vector2 position = initialPos;
             position.x += i * Random.Range(distanceMin, distanceMax);
             position.y += Random.Range(0, heightMax);
 
-            GameObject go = Instantiate(TubaraoPrefab[index], position, Quaternion.identity);
+            GameObject go = Instantiate(InimigoPrefab[index], position, Quaternion.identity);
         }
     }
 }

@@ -5,7 +5,9 @@ using UnityEngine;
 public class CascudoArmadura : HabilidadesGeraisPlayer
 {
     public bool ataqueDefendido = true;
-    HabilidadesGeraisInimigo inimigo = new HabilidadesGeraisInimigo();
+
+    [SerializeField]
+    HabilidadesGeraisInimigo habilidadesGeraisInimigo; 
     public bool armadura = true;
     // Start is called before the first frame update
     void Start()
@@ -30,7 +32,7 @@ public class CascudoArmadura : HabilidadesGeraisPlayer
         else if (ataqueDefendido == false)
         {
 
-            inimigo.CausarDano(this);
+            habilidadesGeraisInimigo.CausarDano(this);
 
         }
     }

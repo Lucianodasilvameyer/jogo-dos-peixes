@@ -19,7 +19,7 @@ public class HabilidadesGeraisPlayer : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        interface_ref = gameObject.GetComponent<Interface>();
+        interface_ref = GetComponent<Interface>();
     }
     void Start()
     {

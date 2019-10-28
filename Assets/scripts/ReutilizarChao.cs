@@ -12,7 +12,7 @@ public class ReutilizarChao : MonoBehaviour
     Queue<GameObject> PoolChao = new Queue<GameObject>();
 
     
-    public int numeroMaxPool = 2;
+    public int numeroMaxPool;
 
 
     // Start is called before the first frame update

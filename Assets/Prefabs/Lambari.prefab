@@ -147,8 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1286013349}
   somCausarDano: {fileID: 8300000, guid: 887fc855d0d7d714eb4694b15ee5e10e, type: 3}
-  somTomarDano: {fileID: 0}
-  game_ref: {fileID: 0}
+  tempoParaComer: {fileID: 0}
 --- !u!114 &470428424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dashSpeed: 200
-  maxDashes: 1
+  maxDashes: 2
   dashes: 0
   timer: 0
   dashCooldown: 10

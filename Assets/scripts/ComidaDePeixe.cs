@@ -7,8 +7,7 @@ public class ComidaDePeixe : MonoBehaviour
     [SerializeField]
     HabilidadesGeraisPlayer habilidadesGeraisPlayer;
 
-    //[SerializeField]
-    //Player player_ref;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +28,7 @@ public class ComidaDePeixe : MonoBehaviour
 
             if(player != null)
             {
-                habilidadesGeraisPlayer.Comer();//aqui não falta colocar primeiro a classe?
+                habilidadesGeraisPlayer.Comer();
                 Destroy(this);
             }
         }
