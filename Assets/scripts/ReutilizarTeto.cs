@@ -34,9 +34,9 @@ public class ReutilizarTeto : MonoBehaviour
     }
     public void reutilizarTeto()
     {
-        GameObject Teto = PoolTeto.Dequeue();//??
+        GameObject Teto = PoolTeto.Dequeue();
 
-        PoolTeto.Enqueue(Teto);//??
+        PoolTeto.Enqueue(Teto);
 
         Teto.transform.position = ProximaPosicaoTeto;
 

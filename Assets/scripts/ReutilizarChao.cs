@@ -12,7 +12,7 @@ public class ReutilizarChao : MonoBehaviour
     Queue<GameObject> PoolChao = new Queue<GameObject>();
 
     
-    public int numeroMaxPool;
+    public int numeroMaxPool; //o valor q eu coloco no inspector para esta variavel fica igual no reutilizarTeto e reutilizarBackground?
 
 
     // Start is called before the first frame update
@@ -29,11 +29,7 @@ public class ReutilizarChao : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public void reutilizarChao()
     {
         GameObject Chao = PoolChao.Dequeue();

@@ -22,6 +22,7 @@ public class TriggerDoChao : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             reutilizarChao.reutilizarChao();
+            Debug.Log("acertou");
         }
     }
 }
