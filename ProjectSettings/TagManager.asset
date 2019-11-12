@@ -52,9 +52,6 @@ TagManager:
   - name: Hud
     uniqueID: 2373563533
     locked: 0
-  - name: ComidaDePeixe
-    uniqueID: 606262135
-    locked: 0
   - name: backGround
     uniqueID: 2947410585
     locked: 0
@@ -63,6 +60,9 @@ TagManager:
     locked: 0
   - name: Inimigo1
     uniqueID: 722615749
+    locked: 0
+  - name: ComidaDePeixe
+    uniqueID: 606262135
     locked: 0
   - name: Lambari
     uniqueID: 100594449
