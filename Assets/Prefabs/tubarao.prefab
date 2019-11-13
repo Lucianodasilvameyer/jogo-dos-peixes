@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3436004475067340289}
   - component: {fileID: 3436004475067340292}
   - component: {fileID: 3436004475067340290}
+  - component: {fileID: 4660804976393820150}
   m_Layer: 0
   m_Name: tubarao
   m_TagString: Inimigo
@@ -221,3 +222,17 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 6
   direction: {x: 0, y: 0}
+--- !u!114 &4660804976393820150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3436004475067340288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d2729d00cb87c4bbb1bd6a495eb9a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cascudoArmadura_ref: {fileID: 0}
+  habilidadesGeraisInimigo_ref: {fileID: 3436004475067340290}

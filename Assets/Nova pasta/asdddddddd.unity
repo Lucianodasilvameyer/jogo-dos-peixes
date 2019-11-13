@@ -289,6 +289,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1340118625946965253}
+    - target: {fileID: 4660804976393820150, guid: 97a65285613358042a4a188083cac7b0,
+        type: 3}
+      propertyPath: cascudoArmadura_ref
+      value: 
+      objectReference: {fileID: 1585799413}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a65285613358042a4a188083cac7b0, type: 3}
 --- !u!1 &79719505 stripped
@@ -309,6 +314,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25535ba0a181324ba45f19dea11dd62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &79719507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79719505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8511493baf086f48bf5932eb5ab1c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  habilidadesGeraisInimigo_ref: {fileID: 79719506}
 --- !u!4 &91104801 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3436004475382672019, guid: 97a65285613358042a4a188083cac7b0,
@@ -333,6 +351,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843e0d32a871a164da00c7413e0de39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &149004095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149004085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea2d50642bbb64a9db347acaa9948e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  armadura: 1
+  reativarArmaduraMax: 8
 --- !u!1 &171317318
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +514,6 @@ GameObject:
   m_Component:
   - component: {fileID: 274100606}
   - component: {fileID: 274100607}
-  - component: {fileID: 274100610}
   - component: {fileID: 274100609}
   - component: {fileID: 274100608}
   - component: {fileID: 274100605}
@@ -574,21 +605,6 @@ MonoBehaviour:
   player: {fileID: 1340118625946965253}
   InimigoPrefab:
   - {fileID: 79719505}
---- !u!114 &274100610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274100604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4b2d490bcd247f4fa7d8db3888da0df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reativarArmaduraInicial: 0
-  reativarArmaduraMax: 5
-  cascudoArmadura: {fileID: 1585799413}
 --- !u!114 &274100611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3224,7 +3240,7 @@ PrefabInstance:
     - target: {fileID: 1340118626260223349, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 470428423, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
       propertyPath: tempoParaComer
@@ -3755,12 +3771,12 @@ PrefabInstance:
     - target: {fileID: 8365788415942785422, guid: 8a4962b395e8754468330ec4737bec81,
         type: 3}
       propertyPath: m_Name
-      value: cascudo
+      value: Cascudo
       objectReference: {fileID: 0}
     - target: {fileID: 8365788415942785422, guid: 8a4962b395e8754468330ec4737bec81,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8365788415942785422, guid: 8a4962b395e8754468330ec4737bec81,
         type: 3}
@@ -3772,6 +3788,11 @@ PrefabInstance:
       propertyPath: habilidadesGeraisInimigo
       value: 
       objectReference: {fileID: 79719506}
+    - target: {fileID: 8365788415942785428, guid: 8a4962b395e8754468330ec4737bec81,
+        type: 3}
+      propertyPath: reativarArmaduraMax
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8365788415942785427, guid: 8a4962b395e8754468330ec4737bec81,
         type: 3}
       propertyPath: m_LocalPosition.x
