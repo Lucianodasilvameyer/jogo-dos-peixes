@@ -12,6 +12,7 @@ TagManager:
   - PowerUp
   - Slider
   - ComidaDePeixe
+  - Cascudo
   layers:
   - Default
   - TransparentFX
@@ -75,4 +76,7 @@ TagManager:
     locked: 0
   - name: Teto
     uniqueID: 3109152693
+    locked: 0
+  - name: Cascudo
+    uniqueID: 3346730849
     locked: 0

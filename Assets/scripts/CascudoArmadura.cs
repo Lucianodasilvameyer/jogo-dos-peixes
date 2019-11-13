@@ -9,6 +9,12 @@ public class CascudoArmadura : HabilidadesGeraisPlayer
     [SerializeField]
     HabilidadesGeraisInimigo habilidadesGeraisInimigo; 
     public bool armadura = true;
+
+    private int reativarArmaduraInicial;
+
+    [SerializeField]
+    private int reativarArmaduraMax;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +24,12 @@ public class CascudoArmadura : HabilidadesGeraisPlayer
     // Update is called once per frame
     void Update()
     {
-        
+        if (Time.time >= reativarArmaduraInicial + reativarArmaduraMax && armadura==false)
+        {
+            armadura = true;
+        }
     }
-    public void Defender()
+    /*public void Defender()
     {
 
 
@@ -39,5 +48,14 @@ public class CascudoArmadura : HabilidadesGeraisPlayer
     public void Togglearmadura()
     {
         armadura = !armadura;
+    }
+    */
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Inimigo"))
+        {
+            armadura = false;
+
+        }
     }
 }

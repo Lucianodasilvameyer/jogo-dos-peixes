@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3436004475067340290}
   m_Layer: 0
   m_Name: tubarao
-  m_TagString: Tubarao
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3436004475067340288}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.1, y: -1, z: 5.4023438}
-  m_LocalScale: {x: 0.7461164, y: 0.7461164, z: 0.7461164}
+  m_LocalScale: {x: 0.6773191, y: 0.6773191, z: 0.6773191}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -68,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 722615749
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 450a2fd204189e945a6fff8801b12769, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -216,11 +216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25535ba0a181324ba45f19dea11dd62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  SomDeColisao: {fileID: 0}
+  habilidadesGeraisPlayer: {fileID: 0}
   strength: 5
   target: {fileID: 0}
   speed: 6
   direction: {x: 0, y: 0}
-  playerUI_ref: {fileID: 0}
-  ataqueDefendido: 1
