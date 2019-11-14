@@ -35,7 +35,7 @@ public class AtacandoCascudo : MonoBehaviour
             }
             else if(cascudoArmadura_ref.armadura == false)
             {
-                habilidadesGeraisInimigo_ref.CausarDano(cascudo);
+                //habilidadesGeraisInimigo_ref.CausarDano(cascudo);
             }
             
         }

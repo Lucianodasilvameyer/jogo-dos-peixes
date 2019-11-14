@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LambariDoubleDash : HabilidadesGeraisPlayer
-{
+/*public class LambariDoubleDash : HabilidadesGeraisPlayer
+  
 
     // Start is called before the first frame update
     [SerializeField]
@@ -57,4 +57,4 @@ public class LambariDoubleDash : HabilidadesGeraisPlayer
         
 
     }
-}
+}*/

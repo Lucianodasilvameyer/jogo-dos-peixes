@@ -44,7 +44,7 @@ public class HabilidadesGeraisInimigo : MonoBehaviour
         transform.Translate(speed* direction* Time.deltaTime);
     }
 
-    internal void CausarDano(Cascudo cascudo)
+    /*internal void CausarDano(Cascudo cascudo)
     {
         throw new NotImplementedException();
     }
@@ -52,7 +52,7 @@ public class HabilidadesGeraisInimigo : MonoBehaviour
     internal void CausarDano(CascudoArmadura cascudoArmadura)
     {
         throw new NotImplementedException();
-    }
+    }*/
 
     public void DefinirAlvo()
     {

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 470428426}
   - component: {fileID: 470428427}
   - component: {fileID: 1286013349}
+  - component: {fileID: 1236429943}
   m_Layer: 0
   m_Name: Lambari
   m_TagString: Player
@@ -161,6 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderHp: {fileID: 0}
+  HpInicial: 50
   HPMax: 50
   hp: 50
 --- !u!114 &470428426
@@ -291,3 +293,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1236429943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340118626260223349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dccec278c2415b64bb0dab1f0b1bd22b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interface_ref: {fileID: 0}
+  game_ref: {fileID: 0}
+  dashes: 0

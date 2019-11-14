@@ -289,6 +289,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1340118625946965253}
+    - target: {fileID: 3436004475067340290, guid: 97a65285613358042a4a188083cac7b0,
+        type: 3}
+      propertyPath: strength
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4660804976393820150, guid: 97a65285613358042a4a188083cac7b0,
         type: 3}
       propertyPath: cascudoArmadura_ref
@@ -314,19 +319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25535ba0a181324ba45f19dea11dd62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &79719507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 79719505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8511493baf086f48bf5932eb5ab1c71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  habilidadesGeraisInimigo_ref: {fileID: 79719506}
 --- !u!4 &91104801 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3436004475382672019, guid: 97a65285613358042a4a188083cac7b0,
@@ -568,9 +560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e01ab9bb367414c8e0c79ef9f2abdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recarregar: 0
-  TempoDashInicial: 0
-  TempoDashMax: 4
 --- !u!114 &274100608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2470,34 +2459,13 @@ PrefabInstance:
       objectReference: {fileID: 1191492710}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97a65285613358042a4a188083cac7b0, type: 3}
---- !u!1 &1236429942 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1340118626260223349, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1340118625946965252}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1236429943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1236429942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dccec278c2415b64bb0dab1f0b1bd22b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interface_ref: {fileID: 0}
-  game_ref: {fileID: 0}
-  dashes: 0
 --- !u!114 &1286013352 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 470428423, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
     type: 3}
   m_PrefabInstance: {fileID: 1340118625946965252}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1236429942}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43f872a461845f649a94c594eb28dec9, type: 3}
@@ -3236,11 +3204,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lambari
-      objectReference: {fileID: 0}
-    - target: {fileID: 1340118626260223349, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 470428423, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
       propertyPath: tempoParaComer

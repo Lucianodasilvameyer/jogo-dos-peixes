@@ -5,7 +5,7 @@ using UnityEngine;
 public class AtacandoPeixes : MonoBehaviour
 {
     
-
+    
     [SerializeField]
     HabilidadesGeraisInimigo habilidadesGeraisInimigo_ref;
 
@@ -25,10 +25,14 @@ public class AtacandoPeixes : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+
+
+
             var Player = collision.gameObject.GetComponent<Player>();
 
             if(Player != null)
             {
+                Debug.Log("acertou");
                 habilidadesGeraisInimigo_ref.CausarDano(Player);
             }
         }

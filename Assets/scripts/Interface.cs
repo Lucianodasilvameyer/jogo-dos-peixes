@@ -10,6 +10,9 @@ public class Interface : MonoBehaviour
     public Slider sliderHp;
 
     [SerializeField]
+    private int HpInicial;
+
+    [SerializeField]
     private int HPMax;
 
     [SerializeField]
@@ -29,20 +32,20 @@ public class Interface : MonoBehaviour
             {
                 hp = 0;
 
-                if (sliderHp && sliderHp != null)// aqui garante q não tem referencias?
+                //if (sliderHp && sliderHp != null)// aqui garante q não tem referencias?
                     sliderHp.value = 0;
             }
             else if (hp >= HPMax)
             {
                 hp = HPMax;
 
-                if (sliderHp && sliderHp != null)
+                //if (sliderHp && sliderHp != null)
                     sliderHp.value = 1;
 
             }
             else
             {
-                if (sliderHp && sliderHp != null)
+                //if (sliderHp && sliderHp != null)
                     sliderHp.value = (float)hp / (float)HPMax; //colocar como float para poder trabalhar com valores de vida com virgula futuramente?
             }
 
@@ -51,6 +54,7 @@ public class Interface : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        HP = HpInicial;
         
     }
 
