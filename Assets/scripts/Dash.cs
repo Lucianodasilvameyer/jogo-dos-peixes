@@ -2,37 +2,49 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class dash : MonoBehaviour
+public class Dash : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public bool isGrounded = false;
+    Rigidbody2D righ;
+
     
-    // Use this for initialization
-    HandleDash;
-    void Start()
+    
+    public float dashSpeed;
+
+   
+
+
+    // Start is called before the first frame update
+    private void Awake()
     {
+        righ = GetComponent<Rigidbody2D>();
 
     }
-    void Update()
+    
+    
+
+    
+    private void FixedUpdate()
     {
-        Jump();
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
-        transform.position += movement * Time.deltaTime * moveSpeed;
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            
+
+            Dashing(x, y);
+        }
+    }
+    public void Dashing(float x, float y)
+    {
+        Debug.Log("corrida");
+
+        Vector2 direction = new Vector2(x, y);
+
+        righ.AddForce(direction * dashSpeed, ForceMode2D.Impulse);
+
+
     }
 
-    void Jump()
-    {
-        if (Input.GetButtonDown("Jump") && isGrounded == true)
-        {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 8.75f), ForceMode2D.Impulse);
-        }
-    }
-    private void HandleDash()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            float dashdistance = 20f;
-            transform.position += lastMoveDir * dashdistance;
-        }
-    }
+  
 }

@@ -2217,7 +2217,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1340118625946965252}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1340118626260223349}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43f872a461845f649a94c594eb28dec9, type: 3}
@@ -3210,35 +3210,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 470428427, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
+    - target: {fileID: 1340118626260223352, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
+        type: 3}
       propertyPath: maxDashes
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 470428427, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
-      propertyPath: dashDelay
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 470428427, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
-      propertyPath: dashCooldown
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 470428427, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 193954392, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
-      propertyPath: tempoParaComer
-      value: 
-      objectReference: {fileID: 274100612}
-    - target: {fileID: 193954392, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 193954392, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
-      propertyPath: dashDelay
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1340118626260223352, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
 --- !u!4 &1340118625946965253 stripped
 Transform:
@@ -3246,6 +3224,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1340118625946965252}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1340118626260223349 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1340118626260223349, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1340118625946965252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1340118626260223352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340118626260223349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620764ad6a885cc4295bacde5c23af3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 30
+  maxDashes: 2
+  dashes: 0
+  timer: 0
+  dashCooldown: 2
+  dashDelay: 4
+  dashEnabled: 1
 --- !u!1001 &1942662091648728906
 PrefabInstance:
   m_ObjectHideFlags: 0

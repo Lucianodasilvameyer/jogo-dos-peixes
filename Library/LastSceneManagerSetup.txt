@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes certas/JogarComCascudo.unity
+- path: Assets/Scenes certas/JogarComLambari.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
