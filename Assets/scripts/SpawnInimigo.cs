@@ -15,7 +15,8 @@ public class SpawnInimigo : MonoBehaviour
     [SerializeField]
     private float timerRespawnInimigosMax;
     [SerializeField]
-    private Transform player; //esta referencia serve para pegar a posição inicial do player?
+    private Transform player; 
+
 
     public GameObject[] InimigoPrefab;//??
     // Start is called before the first frame update
@@ -46,7 +47,7 @@ public class SpawnInimigo : MonoBehaviour
 
         for (int i = 0; i < quantidadeIinimigos; i++)
         {
-            int index = Random.Range(0, InimigoPrefab.Length);
+            int index = Random.Range(0, InimigoPrefab.Length);//aqui o tamanho do array tem q ser igual a quantidade de inimigos?
             Vector2 position = initialPos;
             position.x += i * Random.Range(distanceMin, distanceMax);
             position.y += Random.Range(0, heightMax);

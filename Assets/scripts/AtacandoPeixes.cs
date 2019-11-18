@@ -26,15 +26,16 @@ public class AtacandoPeixes : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
 
+            Debug.Log("acertou");
+            habilidadesGeraisInimigo_ref.CausarDano(collision.GetComponent<Player>());
 
-
-            var Player = collision.gameObject.GetComponent<Player>();
+            /*var Player = collision.gameObject.GetComponent<Player>();
 
             if(Player != null)
             {
                 Debug.Log("acertou");
-                habilidadesGeraisInimigo_ref.CausarDano(Player);
-            }
+                habilidadesGeraisInimigo_ref.CausarDano();
+            }*/
         }
     }
 }

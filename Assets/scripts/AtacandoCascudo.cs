@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class AtacandoCascudo : MonoBehaviour
 {
-    Cascudo cascudo; //??
+    
 
     [SerializeField]
     CascudoArmadura cascudoArmadura_ref;
 
-    [SerializeField]
+    
     HabilidadesGeraisInimigo habilidadesGeraisInimigo_ref;
 
+    
 
-    // Start is called before the first frame update
+
+    private void Awake()
+    {
+        habilidadesGeraisInimigo_ref = GetComponent<HabilidadesGeraisInimigo>();
+    }
     void Start()
     {
 
@@ -26,16 +31,22 @@ public class AtacandoCascudo : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Cascudo"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            if (cascudoArmadura_ref.armadura == true)
+            if (cascudoArmadura_ref.armadura == true && cascudoArmadura_ref.intervaloDeColisao==false)
             {
-                cascudoArmadura_ref.armadura = false;
-                Debug.Log("acertou");
+                
+                cascudoArmadura_ref.intervaloDeColisao = true;
+                
+
+
             }
-            else if(cascudoArmadura_ref.armadura == false)
+            if (cascudoArmadura_ref.armadura == false && cascudoArmadura_ref.intervaloDeColisao==false)                       
             {
-                //habilidadesGeraisInimigo_ref.CausarDano(cascudo);
+                
+                habilidadesGeraisInimigo_ref.CausarDano(collision.GetComponent<Player>());
+                Debug.Log("acertou");
+                
             }
             
         }

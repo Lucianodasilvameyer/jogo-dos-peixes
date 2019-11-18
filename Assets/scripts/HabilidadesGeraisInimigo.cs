@@ -13,7 +13,7 @@ public class HabilidadesGeraisInimigo : MonoBehaviour
     HabilidadesGeraisPlayer habilidadesGeraisPlayer;
 
     [SerializeField]
-    protected float strength; //o q é protected?
+    private float strength; 
 
     [SerializeField]
     private Transform target;
@@ -44,6 +44,8 @@ public class HabilidadesGeraisInimigo : MonoBehaviour
         transform.Translate(speed* direction* Time.deltaTime);
     }
 
+    
+
     /*internal void CausarDano(Cascudo cascudo)
     {
         throw new NotImplementedException();
@@ -58,7 +60,8 @@ public class HabilidadesGeraisInimigo : MonoBehaviour
     {
         if(!target || target == null)
         {
-            target = GameObject.FindGameObjectWithTag("Player").transform;
+            //target = GameObject.FindGameObjectWithTag("Cascudo").transform;
+            //target = GameObject.FindGameObjectWithTag("Player").transform;
 
             
         }
@@ -66,7 +69,7 @@ public class HabilidadesGeraisInimigo : MonoBehaviour
         direction = direction.normalized;
     }
 
-    public void CausarDano(Player alvo)//pq usar este virtual se não á metodos com overload?
+    public void CausarDano(Player alvo)
     {
         habilidadesGeraisPlayer.TomarDano((int)strength);
 

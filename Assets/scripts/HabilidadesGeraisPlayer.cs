@@ -37,7 +37,7 @@ public class HabilidadesGeraisPlayer : MonoBehaviour
     }
     public void TomarDano(int dano)
     {
-        interface_ref.hp -= dano;
+        interface_ref.HP -= dano;
     }
     public void SomPlay(AudioClip Som)
     {

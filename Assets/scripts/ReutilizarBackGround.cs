@@ -15,7 +15,7 @@ public class ReutilizarBackGround : MonoBehaviour
 
     Queue<GameObject> PoolFundo = new Queue<GameObject>();
 
-
+    public int numeroMaxPool;
 
     private void Awake()
     {
@@ -24,7 +24,7 @@ public class ReutilizarBackGround : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       for(int i=0; i < reutilizarChao.numeroMaxPool; i++)
+       for(int i=0; i < numeroMaxPool; i++)
        {
             GameObject se = Instantiate(fundoPrefab, proximaPosicaoFundo, Quaternion.identity);
 
