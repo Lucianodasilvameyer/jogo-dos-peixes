@@ -45,7 +45,7 @@ public class PlayerDash : MonoBehaviour
         }
         */
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.T))
         {
             if(dashes > 0 && dashEnabled)
             {

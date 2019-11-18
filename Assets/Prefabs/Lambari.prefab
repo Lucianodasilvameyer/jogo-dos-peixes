@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 470428426}
   - component: {fileID: 470428427}
   - component: {fileID: 1286013349}
-  - component: {fileID: 1236429943}
+  - component: {fileID: 193954392}
   m_Layer: 0
   m_Name: Lambari
   m_TagString: Player
@@ -162,7 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderHp: {fileID: 0}
-  HpInicial: 50
   HPMax: 50
   hp: 50
 --- !u!114 &470428426
@@ -190,12 +189,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620764ad6a885cc4295bacde5c23af3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 200
+  dashSpeed: 100
   maxDashes: 2
   dashes: 0
   timer: 0
-  dashCooldown: 10
-  dashDelay: 2
+  dashCooldown: 2
+  dashDelay: 0
   dashEnabled: 1
 --- !u!82 &1286013349
 AudioSource:
@@ -223,7 +222,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -293,18 +292,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1236429943
+--- !u!114 &193954392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340118626260223349}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dccec278c2415b64bb0dab1f0b1bd22b, type: 3}
+  m_Script: {fileID: 11500000, guid: e2138bb099cb79945baf8a6b842af91c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interface_ref: {fileID: 0}
-  game_ref: {fileID: 0}
-  dashes: 0
+  audioSource: {fileID: 1286013349}
+  somCausarDano: {fileID: 8300000, guid: 2bb40e22aef118e43a2dfffd0cfa0ca6, type: 3}
+  tempoParaComer: {fileID: 0}
+  timer: 0
+  dashCooldown: 6
+  dashDelay: 0.35
+  dashEnabled: 1
+  dashSpeed: 20
+  TempoDashMax: 3
+  recarregar: 0
+  maxDashes: 2
+  dashes: 2

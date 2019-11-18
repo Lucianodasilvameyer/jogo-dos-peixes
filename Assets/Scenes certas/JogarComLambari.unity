@@ -588,18 +588,6 @@ MonoBehaviour:
   nivelDoChao: 2
   comidaPrefab: {fileID: 466411530}
   timerSpawnComidaMax: 3
---- !u!114 &320046893 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 470428424, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1340118625946965252}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e199b15330039d4fafd39d2d3719c9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &405326327 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7117264337423255396, guid: 2a7972a9368200e4791875088b9eea12,
@@ -3159,11 +3147,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lambari
       objectReference: {fileID: 0}
-    - target: {fileID: 1340118626260223349, guid: 3c42c64700cdd1d4e975372a67b0d2f2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 470428424, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
+      propertyPath: sliderHp
+      value: 
+      objectReference: {fileID: 1520658208}
     - target: {fileID: 470428423, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
       propertyPath: tempoParaComer
       value: 
@@ -3223,24 +3210,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 470428424, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
-      propertyPath: sliderHp
-      value: 
-      objectReference: {fileID: 1520658208}
-    - target: {fileID: 470428424, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
-      propertyPath: hp
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 1236429943, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
-      propertyPath: interface_ref
-      value: 
-      objectReference: {fileID: 320046893}
-    - target: {fileID: 1236429943, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
-      propertyPath: dashes
+    - target: {fileID: 470428427, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
+      propertyPath: maxDashes
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1236429943, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
+    - target: {fileID: 470428427, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
+      propertyPath: dashDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 470428427, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
+      propertyPath: dashCooldown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470428427, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 193954392, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
+      propertyPath: tempoParaComer
+      value: 
+      objectReference: {fileID: 274100612}
+    - target: {fileID: 193954392, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 193954392, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
+      propertyPath: dashDelay
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c42c64700cdd1d4e975372a67b0d2f2, type: 3}
 --- !u!4 &1340118625946965253 stripped
 Transform:
