@@ -76,6 +76,7 @@
     <Compile Include="Assets\scripts\Interface.cs" />
     <Compile Include="Assets\scripts\LambariDoubleDash.cs" />
     <Compile Include="Assets\scripts\MovimentacaoColisores.cs" />
+    <Compile Include="Assets\scripts\Parallax.cs" />
     <Compile Include="Assets\scripts\Piranha.cs" />
     <Compile Include="Assets\scripts\PiranhaCardume.cs" />
     <Compile Include="Assets\scripts\PiranhaPowerUp.cs" />
