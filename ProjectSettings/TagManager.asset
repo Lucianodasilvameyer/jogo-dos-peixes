@@ -65,9 +65,6 @@ TagManager:
   - name: ComidaDePeixe
     uniqueID: 606262135
     locked: 0
-  - name: Lambari
-    uniqueID: 100594449
-    locked: 0
   - name: teto
     uniqueID: 2666950659
     locked: 0
@@ -79,4 +76,16 @@ TagManager:
     locked: 0
   - name: Cascudo
     uniqueID: 3346730849
+    locked: 0
+  - name: segundoChao
+    uniqueID: 3556263811
+    locked: 0
+  - name: Lambari
+    uniqueID: 100594449
+    locked: 0
+  - name: primeiroChao
+    uniqueID: 487216301
+    locked: 0
+  - name: terceiroChao
+    uniqueID: 2448916269
     locked: 0
