@@ -9,11 +9,12 @@ public class ReutilizarChao : MonoBehaviour
     [SerializeField]
     Vector2 proximaPosicaoChao;
 
-    Queue<GameObject> PoolChao = new Queue<GameObject>();
+    
 
     
     public int numeroMaxPool; //o valor q eu coloco no inspector para esta variavel fica igual no reutilizarTeto e reutilizarBackground?
 
+    Queue<GameObject> PoolChao = new Queue<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +39,7 @@ public class ReutilizarChao : MonoBehaviour
 
         Chao.transform.position = proximaPosicaoChao;
 
-        proximaPosicaoChao.x = Chao.GetComponent<SpriteRenderer>().bounds.size.x;
+        proximaPosicaoChao.x += Chao.GetComponent<SpriteRenderer>().bounds.size.x;
 
     }
     

@@ -4,31 +4,31 @@ using UnityEngine;
 
 public class ReutilizarTeto : MonoBehaviour
 {
-    ReutilizarChao reutilizarChao;
+    ReutilizarChao reutilizarChao_ref;
 
     public GameObject Tetoprefab;
 
     [SerializeField]
-    Vector2 ProximaPosicaoTeto;
+    Vector2 proximaPosicaoTeto;
 
     Queue<GameObject> PoolTeto = new Queue<GameObject>();
 
 
     private void Awake()
     {
-        reutilizarChao = GetComponent<ReutilizarChao>();
+        reutilizarChao_ref = GetComponent<ReutilizarChao>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-       for(int i=0; i < reutilizarChao.numeroMaxPool; i++)
+       for(int i=0; i < reutilizarChao_ref.numeroMaxPool; i++)
        {
-            GameObject go = Instantiate(Tetoprefab, ProximaPosicaoTeto, Quaternion.identity);
+            GameObject go = Instantiate(Tetoprefab, proximaPosicaoTeto, Quaternion.identity);
 
             PoolTeto.Enqueue(go);
 
-            ProximaPosicaoTeto.x += go.GetComponent<SpriteRenderer>().bounds.size.x;
+            proximaPosicaoTeto.x += go.GetComponent<SpriteRenderer>().bounds.size.x;
 
        } 
     }
@@ -38,9 +38,9 @@ public class ReutilizarTeto : MonoBehaviour
 
         PoolTeto.Enqueue(Teto);
 
-        Teto.transform.position = ProximaPosicaoTeto;
+        Teto.transform.position = proximaPosicaoTeto;
 
-        ProximaPosicaoTeto.x += Teto.GetComponent<SpriteRenderer>().bounds.size.x; 
+        proximaPosicaoTeto.x += Teto.GetComponent<SpriteRenderer>().bounds.size.x; 
     }
     
     

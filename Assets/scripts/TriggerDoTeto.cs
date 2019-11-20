@@ -22,6 +22,7 @@ public class TriggerDoTeto : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             reutilizarTeto.reutilizarTeto();
+            Debug.Log("Bingo");
         }
     }
 }

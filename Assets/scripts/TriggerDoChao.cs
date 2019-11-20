@@ -5,7 +5,8 @@ using UnityEngine;
 public class TriggerDoChao : MonoBehaviour
 {
     [SerializeField]
-    ReutilizarChao reutilizarChao;
+    ReutilizarChao reutilizarChao_ref;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +18,12 @@ public class TriggerDoChao : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            reutilizarChao.reutilizarChao();
-            Debug.Log("Colidiu");
+            reutilizarChao_ref.reutilizarChao();
+            Debug.Log("Funcionou");
         }
     }
 }
