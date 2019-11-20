@@ -13,6 +13,8 @@ TagManager:
   - Slider
   - ComidaDePeixe
   - Cascudo
+  - Chao
+  - Teto
   layers:
   - Default
   - TransparentFX
