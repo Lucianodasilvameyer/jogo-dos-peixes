@@ -6,7 +6,7 @@ public class cameraMove : MonoBehaviour
 {
     public float speed;
 
-    [SerializeField]
+    
     Rigidbody2D body;
 
     // Start is called before the first frame update
