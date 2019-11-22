@@ -7,8 +7,10 @@ public class MovimentacaoColisores : MonoBehaviour
     [SerializeField]
     private float speed;
 
-    
+    [SerializeField]
     Rigidbody2D body;
+
+    
 
     // Start is called before the first frame update
     void Start()
