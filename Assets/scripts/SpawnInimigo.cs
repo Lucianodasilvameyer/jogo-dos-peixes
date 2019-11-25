@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class SpawnInimigo : MonoBehaviour
 {
+    
+
     [SerializeField]
-    float groundLevel = -2.65f;
+    float groundLevel;
+
 
     [SerializeField]
     float distanceEnemyFromPlayer;
@@ -22,16 +25,18 @@ public class SpawnInimigo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
        
 
-        
 
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+
         if (Time.time >= timerRespawnInimigos + timerRespawnInimigosMax)
         {
             timerRespawnInimigos = Time.time;
@@ -43,7 +48,7 @@ public class SpawnInimigo : MonoBehaviour
 
 
 
-            SpawnarInimigos(Random.Range(1, 2), 1, 6, Random.Range(0, 5), initialPos);// o 1,6 são respectivamente a distanceMin e distanceMax entre os inimigos?
+            SpawnarInimigos(Random.Range(2, 5), 1, 6, Random.Range(0, 5), initialPos);// o 1,6 são respectivamente a distanceMin e distanceMax entre os inimigos?
         }
     }
     public void SpawnarInimigos(int quantidadeIinimigos, float distanceMin, float distanceMax, float heightMax, Vector2 initialPos)

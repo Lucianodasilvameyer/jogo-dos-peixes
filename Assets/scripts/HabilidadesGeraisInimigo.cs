@@ -38,7 +38,6 @@ public class HabilidadesGeraisInimigo : MonoBehaviour
         Mover();
     }
     public void Mover()
-
     {
        
         transform.Translate(speed* direction* Time.deltaTime);
