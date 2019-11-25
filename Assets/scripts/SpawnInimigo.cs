@@ -18,11 +18,15 @@ public class SpawnInimigo : MonoBehaviour
     private Transform player; 
 
 
-    public GameObject[] InimigoPrefab;//??
+    public GameObject[] InimigoPrefab;
     // Start is called before the first frame update
     void Start()
     {
+       
 
+        
+
+        
     }
 
     // Update is called once per frame
@@ -48,9 +52,10 @@ public class SpawnInimigo : MonoBehaviour
         for (int i = 0; i < quantidadeIinimigos; i++)
         {
             int index = Random.Range(0, InimigoPrefab.Length);//aqui o tamanho do array tem q ser igual a quantidade de inimigos?
-            Vector2 position = initialPos;
+            Vector3 position = initialPos;
             position.x += i * Random.Range(distanceMin, distanceMax);
             position.y += Random.Range(0, heightMax);
+            position.z = -1f;
 
             GameObject go = Instantiate(InimigoPrefab[index], position, Quaternion.identity);
         }

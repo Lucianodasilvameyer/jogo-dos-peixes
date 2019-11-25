@@ -5,17 +5,17 @@ using UnityEngine;
 public class MovimentacaoColisores : MonoBehaviour
 {
     [SerializeField]
-    private float speed;
+    CameraComLimites cameraComLimites_ref;
 
-    [SerializeField]
+    
     Rigidbody2D body;
 
     
 
     // Start is called before the first frame update
-    void Start()
+    void Start() //posso usar void awake em vez do void start aqui? 
     {
-        if (!body || body == null)
+        if (!body || body == null)  
             body = GetComponent<Rigidbody2D>();
 
     }
@@ -30,7 +30,7 @@ public class MovimentacaoColisores : MonoBehaviour
     {
         Vector2 Input = new Vector2(1, 0);
         Vector2 Direction = Input.normalized;
-        Vector2 Velocity = speed * Direction;
+        Vector2 Velocity = cameraComLimites_ref.speed * Direction;
         Velocity.y = body.velocity.y;
         body.velocity = Velocity;
 

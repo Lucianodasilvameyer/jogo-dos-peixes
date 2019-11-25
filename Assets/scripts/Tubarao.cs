@@ -8,7 +8,7 @@ public class Tubarao : HabilidadesGeraisInimigo
 
     void Start()
     {
-        DefinirAlvo();
+        //DefinirAlvo();
     }
 
     // Update is called once per frame

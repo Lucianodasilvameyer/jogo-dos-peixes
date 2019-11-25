@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class cameraMove : MonoBehaviour
 {
-    public float speed;
+    
 
+    CameraComLimites cameraComLimites_ref;
     
     Rigidbody2D body;
 
-   
+
+    private void Awake()
+    {
+        cameraComLimites_ref = GetComponent<CameraComLimites>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +32,7 @@ public class cameraMove : MonoBehaviour
     {
         Vector2 Input = new Vector2(1, 0);
         Vector2 Direction = Input.normalized;
-        Vector2 Velocity = speed * Direction;
+        Vector2 Velocity = cameraComLimites_ref.speed * Direction;
         Velocity.y = body.velocity.y;
         body.velocity = Velocity;
 

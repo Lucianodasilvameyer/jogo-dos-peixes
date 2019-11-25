@@ -15,8 +15,8 @@ public class HabilidadesGeraisInimigo : MonoBehaviour
     [SerializeField]
     private float strength; 
 
-    [SerializeField]
-    private Transform target;
+    //[SerializeField]
+    //private Transform target;
 
     [SerializeField]
     float speed;
@@ -29,7 +29,7 @@ public class HabilidadesGeraisInimigo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DefinirAlvo();
+        //DefinirAlvo();
     }
 
     // Update is called once per frame
@@ -56,18 +56,18 @@ public class HabilidadesGeraisInimigo : MonoBehaviour
         throw new NotImplementedException();
     }*/
 
-    public void DefinirAlvo()
+    /*public void DefinirAlvo()
     {
         if(!target || target == null)
         {
             //target = GameObject.FindGameObjectWithTag("Cascudo").transform;
-            //target = GameObject.FindGameObjectWithTag("Player").transform;
+            target = GameObject.FindGameObjectWithTag("Player").transform;
 
             
         }
         direction = target.position - transform.position; //pq o direction tem q ir fora do if?
         direction = direction.normalized;
-    }
+    }*/
 
     public void CausarDano(Player alvo)
     {
