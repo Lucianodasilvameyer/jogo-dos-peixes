@@ -5,6 +5,15 @@ using UnityEngine;
 public class SpawnInimigo : MonoBehaviour
 {
     
+    private float intervaloSpawn=0;
+
+
+    private float intervaloSpawnInicial;
+
+    [SerializeField]
+    private float intervaloSpawnMax;
+
+
 
     [SerializeField]
     float groundLevel;
@@ -18,7 +27,7 @@ public class SpawnInimigo : MonoBehaviour
     [SerializeField]
     private float timerRespawnInimigosMax;
     [SerializeField]
-    private Transform player; 
+    private Transform player_ref; 
 
 
     public GameObject[] InimigoPrefab;
@@ -26,8 +35,8 @@ public class SpawnInimigo : MonoBehaviour
     void Start()
     {
 
-       
 
+        
 
 
     }
@@ -35,20 +44,25 @@ public class SpawnInimigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
-        if (Time.time >= timerRespawnInimigos + timerRespawnInimigosMax)
+        if (Time.time >= intervaloSpawnInicial + intervaloSpawnMax && intervaloSpawn == 0)
         {
+            intervaloSpawn = 1;  
+        }
+        if (Time.time >= timerRespawnInimigos + timerRespawnInimigosMax && intervaloSpawn==1)
+        {
+            
+
             timerRespawnInimigos = Time.time;
 
+            intervaloSpawn = 0;
 
-            Vector2 initialPos = player.transform.position;
+            Vector2 initialPos = player_ref.transform.position;
             initialPos.x += distanceEnemyFromPlayer;
             initialPos.y = groundLevel;// aqui o y é sempre o mesmo
 
 
 
-            SpawnarInimigos(Random.Range(2, 5), 1, 6, Random.Range(0, 5), initialPos);// o 1,6 são respectivamente a distanceMin e distanceMax entre os inimigos?
+            SpawnarInimigos(1, 1, 6,Random.Range(-26, 19.137f), initialPos);// o 1,6 são respectivamente a distanceMin e distanceMax entre os inimigos?
         }
     }
     public void SpawnarInimigos(int quantidadeIinimigos, float distanceMin, float distanceMax, float heightMax, Vector2 initialPos)
@@ -65,4 +79,5 @@ public class SpawnInimigo : MonoBehaviour
             GameObject go = Instantiate(InimigoPrefab[index], position, Quaternion.identity);
         }
     }
+    
 }

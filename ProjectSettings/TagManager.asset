@@ -91,3 +91,6 @@ TagManager:
   - name: terceiroChao
     uniqueID: 2448916269
     locked: 0
+  - name: iscaDePeixe
+    uniqueID: 3553030193
+    locked: 0
