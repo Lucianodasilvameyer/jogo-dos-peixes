@@ -94,3 +94,9 @@ TagManager:
   - name: iscaDePeixe
     uniqueID: 3553030193
     locked: 0
+  - name: tubarao
+    uniqueID: 1398265741
+    locked: 0
+  - name: RedeDePesca
+    uniqueID: 3002294047
+    locked: 0

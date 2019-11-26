@@ -57,12 +57,13 @@ public class SpawnInimigo : MonoBehaviour
             intervaloSpawn = 0;
 
             Vector2 initialPos = player_ref.transform.position;
-            initialPos.x += distanceEnemyFromPlayer;
-            initialPos.y = groundLevel;// aqui o y é sempre o mesmo
+            Vector2 position = initialPos;
+            position.x += distanceEnemyFromPlayer;
+            position.y = groundLevel;// aqui o y é sempre o mesmo
 
 
 
-            SpawnarInimigos(1, 1, 6,Random.Range(-26, 19.137f), initialPos);// o 1,6 são respectivamente a distanceMin e distanceMax entre os inimigos?
+            SpawnarInimigos(1, 1, 6,Random.Range(-26, 19.137f), position);// o 1,6 são respectivamente a distanceMin e distanceMax entre os inimigos?
         }
     }
     public void SpawnarInimigos(int quantidadeIinimigos, float distanceMin, float distanceMax, float heightMax, Vector2 initialPos)
