@@ -28,16 +28,14 @@ public class Rede : MonoBehaviour
     {
        if(Time.time>= velocidadeLentaInicial+velocidadeLentaMax && devagar == true)
        {
-            devagar = false;
 
+            devagar = false;
             playerMovimentacao_ref.speed += (int)recuperacao;
 
             velocidadeLentaInicial = Time.time;
 
             
-
-            
-       } 
+        } 
     }
     public void desacelerar(int prender)
     {

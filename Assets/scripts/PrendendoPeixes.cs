@@ -6,6 +6,8 @@ public class PrendendoPeixes : MonoBehaviour
 {
     Rede rede_ref;
 
+    
+
     private void Awake()
     {
         rede_ref = GetComponent<Rede>();
@@ -31,4 +33,6 @@ public class PrendendoPeixes : MonoBehaviour
 
         }
     }
+  
+
 }

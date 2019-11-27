@@ -97,6 +97,9 @@ TagManager:
   - name: tubarao
     uniqueID: 1398265741
     locked: 0
-  - name: RedeDePesca
-    uniqueID: 3002294047
+  - name: triggerRede
+    uniqueID: 2988185191
+    locked: 0
+  - name: redes
+    uniqueID: 958778889
     locked: 0
