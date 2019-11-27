@@ -8,7 +8,9 @@ public class Rede : MonoBehaviour
     PlayerMovimentacao playerMovimentacao_ref;
 
     public float strength;
-    public float recuperacao;
+
+    public float recarregar;
+   
 
     public bool devagar = false;
 
@@ -30,9 +32,10 @@ public class Rede : MonoBehaviour
        {
 
             devagar = false;
-            playerMovimentacao_ref.speed += (int)recuperacao;
+            
+            playerMovimentacao_ref.speed += (int)recarregar;
 
-            velocidadeLentaInicial = Time.time;
+            
 
             
         } 
@@ -41,10 +44,12 @@ public class Rede : MonoBehaviour
     {
         playerMovimentacao_ref.speed -= prender;
         devagar = true;
+        
     }
     public void lentidao(Player alvo)
     {
         desacelerar((int)strength);
+        
     }
 
 

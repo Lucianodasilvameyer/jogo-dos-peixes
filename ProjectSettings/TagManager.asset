@@ -52,6 +52,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: RedeDePesca
+    uniqueID: 1554764641
+    locked: 0
   - name: Hud
     uniqueID: 2373563533
     locked: 0
