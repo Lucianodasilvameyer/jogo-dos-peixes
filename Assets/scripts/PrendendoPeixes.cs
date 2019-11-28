@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PrendendoPeixes : MonoBehaviour
 {
-    Rede rede_ref;
+    CapturaDePeixe capturaDePeixe_ref;
 
-    
+   
 
     private void Awake()
     {
-        rede_ref = GetComponent<Rede>();
+        capturaDePeixe_ref = GetComponent<CapturaDePeixe>();
     }
 
     // Start is called before the first frame update
@@ -26,13 +26,11 @@ public class PrendendoPeixes : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Prendeu");
-            rede_ref.lentidao(collision.GetComponent<Player>());
-
-        }
+        Debug.Log("Prendeu");
+        capturaDePeixe_ref.lentidao(collision.GetComponent<Player>());
+        
     }
-  
+
+
 
 }

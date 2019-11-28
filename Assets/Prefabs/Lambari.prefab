@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 1340118626260223346}
   - component: {fileID: 1340118626260223345}
   - component: {fileID: 1340118626260223351}
-  - component: {fileID: 1340118626260223350}
   - component: {fileID: 470428423}
   - component: {fileID: 470428424}
   - component: {fileID: 470428426}
   - component: {fileID: 1286013349}
+  - component: {fileID: 1340118626260223354}
   - component: {fileID: 1340118626260223352}
   m_Layer: 0
   m_Name: Lambari
@@ -72,9 +72,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 100594449
-  m_SortingLayer: 6
-  m_SortingOrder: 0
+  m_SortingLayerID: 996386599
+  m_SortingLayer: 21
+  m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: d68797bc1e8c8c94abf9dbce4b1d266c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.14191246, y: -0.26231098}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -110,29 +110,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.23, y: 2.97}
-  m_EdgeRadius: 0
---- !u!50 &1340118626260223350
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340118626260223349}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Size: {x: 5.6643543, y: 3.679439}
+  m_EdgeRadius: 0.12
 --- !u!114 &470428423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +175,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.371419
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -272,6 +251,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!50 &1340118626260223354
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340118626260223349}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!114 &1340118626260223352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,10 +284,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620764ad6a885cc4295bacde5c23af3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 10
-  maxDashes: 0
+  dashSpeed: 200
+  maxDashes: 2
   dashes: 0
   timer: 0
-  dashCooldown: 2
-  dashDelay: 1
+  dashCooldown: 5
+  dashDelay: 0
   dashEnabled: 1

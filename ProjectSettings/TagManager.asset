@@ -52,9 +52,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: RedeDePesca
-    uniqueID: 1554764641
-    locked: 0
   - name: Hud
     uniqueID: 2373563533
     locked: 0
@@ -70,8 +67,17 @@ TagManager:
   - name: ComidaDePeixe
     uniqueID: 606262135
     locked: 0
+  - name: triggerRede
+    uniqueID: 2988185191
+    locked: 0
   - name: teto
     uniqueID: 2666950659
+    locked: 0
+  - name: Traira
+    uniqueID: 2969637297
+    locked: 0
+  - name: RedeDePesca
+    uniqueID: 1554764641
     locked: 0
   - name: Chao
     uniqueID: 276994531
@@ -94,15 +100,21 @@ TagManager:
   - name: terceiroChao
     uniqueID: 2448916269
     locked: 0
+  - name: RedeDePeixe
+    uniqueID: 2308780107
+    locked: 0
   - name: iscaDePeixe
     uniqueID: 3553030193
     locked: 0
   - name: tubarao
     uniqueID: 1398265741
     locked: 0
-  - name: triggerRede
-    uniqueID: 2988185191
-    locked: 0
   - name: redes
     uniqueID: 958778889
+    locked: 0
+  - name: traira
+    uniqueID: 996386599
+    locked: 0
+  - name: RedeDoPeixe
+    uniqueID: 2477305877
     locked: 0

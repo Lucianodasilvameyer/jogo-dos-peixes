@@ -47,7 +47,9 @@ public class SpawnInimigo : MonoBehaviour
     {
         if (Time.time >= intervaloSpawnInicial + intervaloSpawnMax && intervaloSpawn == 0)
         {
-            intervaloSpawn = 1;  
+            intervaloSpawn = 1;
+            intervaloSpawnInicial = Time.time;
+
         }
         if (Time.time >= timerRespawnInimigos + timerRespawnInimigosMax && intervaloSpawn==1)
         {
@@ -64,7 +66,7 @@ public class SpawnInimigo : MonoBehaviour
 
 
 
-            SpawnarInimigos(1, 1, 6,Random.Range(0,2.41f), position);// o 1,6 são respectivamente a distanceMin e distanceMax entre os inimigos?
+            SpawnarInimigos(1, 1, 6,Random.Range(-26, 30), position);// o 1,6 são respectivamente a distanceMin e distanceMax entre os inimigos?
         }
     }
     public void SpawnarInimigos(int quantidadeIinimigos, float distanceMin, float distanceMax, float heightMax, Vector3 initialPos)
